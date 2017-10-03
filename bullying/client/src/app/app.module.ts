@@ -14,6 +14,7 @@ import { LoginformComponent } from './loginform/loginform.component';
 import { SignupformComponent } from './signupform/signupform.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { QuizzComponent } from './quizz/quizz.component';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { QuizzComponent } from './quizz/quizz.component';
     LoginformComponent,
     SignupformComponent,
     UserprofileComponent,
-    QuizzComponent
+    QuizzComponent,
+    EditprofileComponent
   ],
   imports: [
     BrowserModule,

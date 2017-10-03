@@ -4,6 +4,7 @@ const path = require('path');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const debug = require('debug')("angularauth:"+path.basename(__filename).split('.')[0]);
+const upload = require('../config/multer');
 
 const authRoutes = express.Router();
 
@@ -72,6 +73,27 @@ authRoutes.get('/loggedin', (req, res, next) => {
     return res.status(200).json(req.user);
   res.status(403).json({ message: 'Unauthorized' });
 });
+
+authRoutes.put('/:id/edit',ensureLoggedIn(), upload.single('filename'),(req,res,next) =>{
+  const {username, password, role, picture} = req.body;
+    const userId = req.params.id;
+
+  const salt     = bcrypt.genSaltSync(10);
+  const hashPass = bcrypt.hashSync(password, salt);
+  debug('creating user');
+  const updates = new User({
+    username,
+    password: hashPass,
+    role,
+    picture
+  });
+
+  User.findByIdAndUpdate(userId, updates,(err, user) => {
+    if (err)
+      return res.status(500).json({ message: 'Something went wrong' });
+      res.status(200).json(req.user);
+  });
+})
 
 
 module.exports = authRoutes;
