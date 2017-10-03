@@ -5,10 +5,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'The name brand is required']
   },
-  rol : {
+  role : {
     type : String,
-    enum : ["Admin", "Older Brother", "Younger Brother"],
-    default : "Younger Brother"
+    enum : ["Admin", "Tutor", "Student"],
+    default : "Student"
   },
   email:String,
   password: {

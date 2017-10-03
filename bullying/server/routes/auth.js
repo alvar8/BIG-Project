@@ -5,11 +5,11 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const debug = require('debug')("angularauth:"+path.basename(__filename).split('.')[0]);
 
-var authRoutes = express.Router();
+const authRoutes = express.Router();
 
 /* GET home page. */
 authRoutes.post('/signup', (req, res, next) => {
-  const {username, password} = req.body;
+  const {username, password, role} = req.body;
 
   if (!username || !password)
     return res.status(400).json({ message: 'Provide username and password' });
@@ -25,7 +25,8 @@ authRoutes.post('/signup', (req, res, next) => {
     debug('creating user');
     const theUser = new User({
       username,
-      password: hashPass
+      password: hashPass,
+      role
     });
     return theUser.save()
     .then(user =>{
