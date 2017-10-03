@@ -18,7 +18,7 @@ export class QuizzComponent implements OnInit {
   ngOnInit() {
     this.controller.getStudentQuizz().subscribe(quizz => this.studentQuizz = quizz);
     this.controller.getTutorQuizz().subscribe(quizz2 => this.tutorQuizz=quizz2);
-    this.randomNumber=Math.round((Math.random()*1))
+    this.randomNumber=Math.round((Math.random()*3))
     this.user=this.log.user
     this.userRole=this.user.role
     console.log(this.user)
@@ -26,7 +26,7 @@ export class QuizzComponent implements OnInit {
   }
 
   getRandomNumber(){
-    this.randomNumber=Math.round((Math.random()*1))
+    this.randomNumber=Math.round((Math.random()*3))
     console.log(this.randomNumber);
   }
 }

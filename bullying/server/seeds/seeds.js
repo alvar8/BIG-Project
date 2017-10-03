@@ -9,21 +9,21 @@ const Quizz = require('../models/Quizz.js');
 
   const quizzs = [{
   studentQuizz:[{
-    question : "eh?",
-    answer : ["a","e"]
+    question : "como?",
+    answer : ["ad","c"]
   }],
   tutorQuizz:[{
-    question : "ah?",
+    question : "que?",
     answer : ["o","u"]
   }]
 },{
   studentQuizz:[{
-    question : "?",
-    answer : ["i","e"]
+    question : "hh?",
+    answer : ["w","k"]
   }],
   tutorQuizz:[{
-    question : "??",
-    answer : ["i","u"]
+    question : "cuando",
+    answer : ["12","34"]
   }]
 }
 
