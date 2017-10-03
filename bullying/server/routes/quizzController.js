@@ -7,7 +7,7 @@ const debug = require('debug')("angularauth:"+path.basename(__filename).split('.
 
 const quizzRoutes = express.Router();
 
-quizzRoutes.get('/quizz', (req, res, next) => {
+quizzRoutes.get('/quizzs', (req, res, next) => {
   Quizz.find()
         .then((quizz)=>res.status(200).json(quizz))
         .catch( e => res.status(500).json({error:e.message}))
