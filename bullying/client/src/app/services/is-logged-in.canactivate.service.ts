@@ -9,7 +9,7 @@ const timeout = (nS) => new Promise((resolve) => setTimeout(resolve,nS * 1000));
 
 @Injectable()
 export class IsLoggedInService implements CanActivate {
-
+  user;
   constructor(private auth:AuthService) { }
 
   canActivate(): Observable<boolean> | Promise<boolean> | boolean {
@@ -17,7 +17,10 @@ export class IsLoggedInService implements CanActivate {
 
     //return timeout(5).then(() => true);
     //return this.auth.isLoggedIn().map(user => true)
-    return this.auth.getUser() ? true : false
+    this.user=this.auth.getUser()
+    return this.user ? true : false
     //return false;
   }
+
+
 }

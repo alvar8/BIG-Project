@@ -1,9 +1,20 @@
 <p>
   quizz works!
 </p>
+<div *ngIf="this.userRole=='Tutor'">
 <div *ngIf="this.tutorQuizz">
   <p>{{this.tutorQuizz[this.randomNumber][0].question }}</p>
   <p>{{this.tutorQuizz[this.randomNumber][0].answer[0]}}</p>
   <p>{{this.tutorQuizz[this.randomNumber][0].answer[1]}}</p>
   <button (click)="this.getRandomNumber()">Next</button>
 </div>
+</div>
+<div *ngIf="this.userRole=='Student'">
+<div *ngIf="this.studentQuizz">
+  <p>{{this.studentQuizz[0][0].question }}</p>
+  <p>{{this.studentQuizz[0][0].answer[0]}}</p>
+  <p>{{this.studentQuizz[0][0].answer[1]}}</p>
+  <button (click)="this.getRandomNumber()">Next</button>
+</div>
+</div>
+<p>{{this.userRole}}</p>
