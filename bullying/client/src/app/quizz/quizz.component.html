@@ -1,4 +1,7 @@
 <p>
   quizz works!
 </p>
-<p>{{tutorQuizz.question}}</p>
+<div *ngIf="this.tutorQuizz">
+  <p>{{this.tutorQuizz[0][0].question }}</p>
+  <p>{{this.studentQuizz | json}}</p>
+</div>

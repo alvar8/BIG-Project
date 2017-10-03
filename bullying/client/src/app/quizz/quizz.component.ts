@@ -12,10 +12,8 @@ export class QuizzComponent implements OnInit {
   constructor(public controller:QuizzControllerService) { }
 
   ngOnInit() {
-    this.controller.getStudentQuizz().subscribe(quizz => this.studentQuizz=quizz);
-    this.tutorQuizz=this.controller.getTutorQuizz();
-    console.log(this.studentQuizz)
-    console.log(this.tutorQuizz)
+    this.controller.getStudentQuizz().subscribe(quizz => this.studentQuizz = quizz);
+    this.controller.getTutorQuizz().subscribe(quizz2 => this.tutorQuizz=quizz2);
   }
 
 }
