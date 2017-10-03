@@ -9,6 +9,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const debug = require('debug')("angularauth:"+path.basename(__filename).split('.')[0]);
 const authRoutes = require('./routes/auth');
+const quizzRoutes = require('./routes/quizzController');
 const mongoose = require('mongoose');
 const cors = require('cors');
 

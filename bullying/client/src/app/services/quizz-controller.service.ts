@@ -5,6 +5,7 @@ import 'rxjs';
 import {environment} from '../../environments/environment';
 
 const BASEURL = environment.BASEURL + "/quizz";
+const BASEURLAuth = environment.BASEURL + "/auth";
 
 @Injectable()
 export class QuizzControllerService {
@@ -25,8 +26,14 @@ private emitUserLoginEvent(user){
   return user;
 }
 
-getQuizzs(){
-  return this.http.get(`${BASEURL}/quizzs`, this.options)
+getStudentQuizz(){
+  return this.http.get(`${BASEURL}/student`, this.options)
+  .map(res => res.json())
+  .catch(this.handleError);
+}
+
+getTutorQuizz(){
+  return this.http.get(`${BASEURL}/tutor`, this.options)
   .map(res => res.json())
   .catch(this.handleError);
 }
@@ -37,7 +44,7 @@ private handleError(e) {
 }
 
 isLoggedIn() {
-  return this.http.get(`${BASEURL}/loggedin`, this.options)
+  return this.http.get(`${BASEURLAuth}/loggedin`, this.options)
     .map(res => res.json())
     .map(user => this.emitUserLoginEvent(user))
     .catch(this.handleError);

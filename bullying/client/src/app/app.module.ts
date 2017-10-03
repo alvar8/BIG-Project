@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
 import { RouterModule } from '@angular/router';
 import { IsLoggedInService } from './services/is-logged-in.canactivate.service';
+import { QuizzControllerService } from './services/quizz-controller.service';
 import {routes} from './routes';
 import { HomeComponent } from './home/home.component';
 import { LoginformComponent } from './loginform/loginform.component';
@@ -29,7 +30,7 @@ import { QuizzComponent } from './quizz/quizz.component';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService, IsLoggedInService],
+  providers: [AuthService, IsLoggedInService,QuizzControllerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
 
 const quizzSchema = new mongoose.Schema({
-  quizz:[{
+  studentQuizz:[{
+    question : String,
+    answer : [{type: String}]
+  }],
+
+  tutorQuizz:[{
     question : String,
     answer : [{type: String}]
      }]
