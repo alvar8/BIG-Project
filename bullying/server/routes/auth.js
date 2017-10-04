@@ -98,4 +98,22 @@ authRoutes.put ('/edit', upload.single('filename'),(req,res,next) =>{
 })
 
 
+authRoutes.post ('/bro',(req,res,next) =>{
+
+  const {id} = req.body;
+  console.log(id)
+
+  // const updates = new User({
+  //   refToBrother:id,
+  // });
+  // console.log(updates)
+
+  User.findOneAndUpdate({role:"Tutor"}, {$set:{refToBrother:id}}, {new: true},(err, user) => {
+    if (err)
+      return res.status(500).json({ message: 'Something went wrong' });
+      res.status(200).json(req.user);
+  });
+})
+
+
 module.exports = authRoutes;

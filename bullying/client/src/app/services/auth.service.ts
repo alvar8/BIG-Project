@@ -64,4 +64,11 @@ export class AuthService {
         .map(user => this.emitUserLoginEvent(user))
         .catch(this.handleError);
     }
+
+    getbro(id) {
+      console.log(id)
+      return this.http.post(`${BASEURL}/bro`, {id}, this.options)
+        .map(res => res.json())
+        .catch(this.handleError);
+    }
 }

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema   = mongoose.Schema;
 
 const userSchema = new mongoose.Schema({
   username: {
@@ -15,6 +16,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'The password brand is required']
   },
+  refToBrother:Schema.Types.ObjectId,
   picture: {
     pic_path: String,
     pic_name: String

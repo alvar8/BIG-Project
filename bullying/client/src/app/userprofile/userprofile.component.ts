@@ -17,4 +17,9 @@ export class UserprofileComponent implements OnInit {
   ngOnInit() {
   }
 
+  getabro(id){
+    console.log(id)
+    this.auth.getbro(id).map(user => console.log(user))
+    .subscribe();
+  }
 }

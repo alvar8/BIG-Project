@@ -16,6 +16,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { FileSelectDirective } from "ng2-file-upload";
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FileSelectDirective } from "ng2-file-upload";
     UserprofileComponent,
     QuizzComponent,
     EditprofileComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

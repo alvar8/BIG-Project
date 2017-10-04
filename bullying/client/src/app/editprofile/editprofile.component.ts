@@ -45,4 +45,7 @@ export class EditprofileComponent implements OnInit {
   this.uploader.uploadAll();
   this.uploader.onCompleteItem=  () => console.log("hecho")
   }
+  getabro(){
+    
+  }
 }

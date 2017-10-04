@@ -7,6 +7,7 @@ import {SignupformComponent} from './signupform/signupform.component';
 import {QuizzComponent} from './quizz/quizz.component';
 import {EditprofileComponent} from './editprofile/editprofile.component'
 import {IsLoggedInService} from './services/is-logged-in.canactivate.service';
+import {ChatComponent} from './chat/chat.component'
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'signup',  component: SignupformComponent,  },
     { path: 'quizz',  component: QuizzComponent,  },
     { path: 'edit/:id', component: EditprofileComponent},
+    { path: 'chat/:id', component: ChatComponent},
     { path: '**', redirectTo: '' }
 ];

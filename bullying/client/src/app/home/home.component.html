@@ -1,3 +1,14 @@
 <p>
   home works!
 </p>
+<div *ngIf="user">
+  <li><a [routerLink]="['/user']">User Profile</a></li>
+  <li><a [routerLink]="['/quizz']">Quizz</a></li>
+  <li><a [routerLink]="['/chat']">Chat</a></li>
+  <div *ngIf="this.userRole=='Student'">
+  <li><a [routerLink]="['/chat',user._id]">Chat</a></li>
+</div>
+<div *ngIf="this.userRole=='Tutor'">
+  <li><a [routerLink]="['/chat',user.refToBrother]">Chat</a></li>
+</div>
+</div>
