@@ -74,9 +74,10 @@ authRoutes.get('/loggedin', (req, res, next) => {
   res.status(403).json({ message: 'Unauthorized' });
 });
 
-authRoutes.put('/:id/edit',ensureLoggedIn(), upload.single('filename'),(req,res,next) =>{
+authRoutes.put ('/edit', upload.single('filename'),(req,res,next) =>{
+  console.log("entro en backend")
   const {username, password, role, picture} = req.body;
-    const userId = req.params.id;
+    // const userId = req.params.id;
 
   const salt     = bcrypt.genSaltSync(10);
   const hashPass = bcrypt.hashSync(password, salt);
@@ -85,10 +86,11 @@ authRoutes.put('/:id/edit',ensureLoggedIn(), upload.single('filename'),(req,res,
     username,
     password: hashPass,
     role,
-    picture
+    picture: `/uploads/${req.file.filename}`,
   });
+  console.log(updates)
 
-  User.findByIdAndUpdate(userId, updates,(err, user) => {
+  User.findOneAndUpdate({username:username}, updates,(err, user) => {
     if (err)
       return res.status(500).json({ message: 'Something went wrong' });
       res.status(200).json(req.user);

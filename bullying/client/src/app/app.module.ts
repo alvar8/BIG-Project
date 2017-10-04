@@ -15,6 +15,7 @@ import { SignupformComponent } from './signupform/signupform.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
+import { FileSelectDirective } from "ng2-file-upload";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
     SignupformComponent,
     UserprofileComponent,
     QuizzComponent,
-    EditprofileComponent
+    EditprofileComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,

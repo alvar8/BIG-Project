@@ -15,6 +15,35 @@ const cors = require('cors');
 
 const app = express();
 
+// app.use(function(req, res, next) { //allow cross origin requests
+//         res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
+//         res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+//         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//         res.header("Access-Control-Allow-Credentials", true);
+//         next();
+//     });
+    // var gulp   = require( 'gulp' ),
+    //     server = require( 'gulp-develop-server' )
+    //     jshint = require('gulp-jshint');
+    //
+    // gulp.task('lint', function() {
+    //   return gulp.src('app.js')
+    //     .pipe(jshint())
+    //     .pipe(jshint.reporter('default'));
+    // });
+    //
+    //     // run server
+    // gulp.task( 'server:start', function() {
+    //     server.listen( { path: './app.js' } );
+    // });
+    //
+    // // restart server if app.js changed
+    // gulp.task( 'server:restart', function() {
+    //     gulp.watch( [ './app.js' ], server.restart );
+    // });
+    //
+    // gulp.task('default', ['lint','server:start','server:restart']);
+
 require('./config/database');
 
 var whitelist = [

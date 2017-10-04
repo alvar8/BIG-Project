@@ -1,16 +1,18 @@
 <form >
-  <h2> Signup </h2>
+  <h2> Edit</h2>
   <label> Username </label>
-  <input type="text" [(ngModel)]="formInfo.username" name="username"/>
+  <input type="text" [(ngModel)]="newUser.username" name="username"/>
   <br>
   <label> Password </label>
-  <input type="password" [(ngModel)]="formInfo.password" name="password"/>
+  <input type="password" [(ngModel)]="newUser.password" name="password"/>
 
   <label> Role </label>
-  <input type="radio" [(ngModel)]="formInfo.role" name="role" value="Tutor"> Tutor<br>
-  <input type="radio" [(ngModel)]="formInfo.role" name="role" value="Student"> Student<br>
+  <input type="radio" [(ngModel)]="newUser.role" name="role" value="Tutor"> Tutor<br>
+  <input type="radio" [(ngModel)]="newUser.role" name="role" value="Student"> Student<br>
 
   <label>Picture</label>
 
-  <button (click)="signup()"> signup </button>
+  <input type="file" name="single" ng2FileSelect [uploader]="uploader" />   
+
+  <button (click)="submit()"> Edit </button>
 </form>

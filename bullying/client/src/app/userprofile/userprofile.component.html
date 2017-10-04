@@ -10,5 +10,7 @@
   <p> Hello {{user.username}}</p>
   <p>{{user.role}}</p>
 
+  <a [routerLink]="['/edit',user._id]">Edit profile</a>
+
   <button (click)="auth.logout().subscribe()"> logout </button>
 </div>
