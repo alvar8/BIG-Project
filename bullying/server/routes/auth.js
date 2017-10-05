@@ -147,8 +147,6 @@ authRoutes.post('/messages',(req,res,next)=>{
   authRoutes.get('/messages/:id',(req,res,next)=>{
     const{id}=req.params;
     console.log(id)
-    //Message.find({refToYoungerBrother:id},(err, messages)=>{
-    //{ $or:[ {'_id':objId}, {'name':param}, {'nickname':param} ]}
     Message.find({$or:[{refToYoungerBrother:id},{refToOlderBrother:id}]},(err,messages)=>{
     res.status(200).json(messages);
   }).catch( e => res.status(500).json({error:e.message}));
