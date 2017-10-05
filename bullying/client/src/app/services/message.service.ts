@@ -29,8 +29,9 @@ export class MessageService {
     return Observable.throw(e.json().message);
   }
 
-  sendmessages(id,message){
-    return this.http.post(`${BASEURL}/messages`, {id,message}, this.options)
+  sendmessages(id,message,ref){
+    console.log(ref)
+    return this.http.post(`${BASEURL}/messages`, {id,message,ref}, this.options)
       .map(res => res.json())
       .catch(this.handleError);
   }

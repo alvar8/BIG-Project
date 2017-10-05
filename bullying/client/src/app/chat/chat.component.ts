@@ -30,8 +30,9 @@ export class ChatComponent implements OnInit {
       //  this.userRole=this.user.role
   }
 
-  send(id,message){
-    this.messages.sendmessages(id,message).map(user => console.log(user))
+  send(id,message,ref){
+    console.log(ref)
+    this.messages.sendmessages(id,message,ref).map(user => console.log(user))
     .subscribe();
 
   }

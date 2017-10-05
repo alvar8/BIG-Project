@@ -100,21 +100,14 @@ authRoutes.put ('/edit', upload.single('filename'),(req,res,next) =>{
 
 
 authRoutes.post ('/bro',(req,res,next) =>{
-
   const {id} = req.body;
   console.log(id)
 
-  // const updates = new User({
-  //   refToBrother:id,
-  // });
-  // console.log(updates)
-
-  User.findOneAndUpdate({role:"Tutor"}, {$set:{refToBrother:id}}, {new: true},(err, user) => {
-   if (err)
-     return res.status(500).json({ message: 'Something went wrong' });
-     res.status(200).json(req.user);
- });
-
+  User.findOneAndUpdate({role:"Tutor",refToBrother:""}, {$set:{refToBrother:id}}, {new: true})
+  .then(result =>
+    User.findByIdAndUpdate(id, {$set:{refToBrother:result._id}}, {new: true})
+    .then( result2 => res.status(200).json(result2))
+)
 })
 
 
@@ -138,12 +131,14 @@ authRoutes.post ('/bro',(req,res,next) =>{
 // })
 
 authRoutes.post('/messages',(req,res,next)=>{
-  const {id,message} = req.body;
+  const {id,message,ref} = req.body;
     console.log(id)
     console.log(message)
+    console.log(ref)
     const newMessage = new Message({
       refToYoungerBrother:id,
       message:message,
+      refToOlderBrother:ref,
     }).save()
     .then(p => res.status(200).json(p))
     .catch(e => next(e))
@@ -152,7 +147,9 @@ authRoutes.post('/messages',(req,res,next)=>{
   authRoutes.get('/messages/:id',(req,res,next)=>{
     const{id}=req.params;
     console.log(id)
-    Message.find({refToYoungerBrother:id},(err, messages)=>{
+    //Message.find({refToYoungerBrother:id},(err, messages)=>{
+    //{ $or:[ {'_id':objId}, {'name':param}, {'nickname':param} ]}
+    Message.find({$or:[{refToYoungerBrother:id},{refToOlderBrother:id}]},(err,messages)=>{
     res.status(200).json(messages);
   }).catch( e => res.status(500).json({error:e.message}));
   })

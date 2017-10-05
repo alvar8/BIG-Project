@@ -16,7 +16,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'The password brand is required']
   },
-  refToBrother:Schema.Types.ObjectId,
+  refToBrother:{
+    type: String,
+    default:""
+  },
   message:[{type: String}],
   picture: {
     pic_path: String,
