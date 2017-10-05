@@ -21,8 +21,6 @@ export class QuizzComponent implements OnInit {
     this.randomNumber=Math.round((Math.random()*3))
     this.user=this.log.user
     this.userRole=this.user.role
-    console.log(this.user)
-    console.log(this.userRole)
   }
 
   getRandomNumber(){

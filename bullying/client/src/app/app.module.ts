@@ -8,6 +8,7 @@ import { AuthService } from './services/auth.service';
 import { RouterModule } from '@angular/router';
 import { IsLoggedInService } from './services/is-logged-in.canactivate.service';
 import { QuizzControllerService } from './services/quizz-controller.service';
+import { MessageService } from './services/message.service';
 import {routes} from './routes';
 import { HomeComponent } from './home/home.component';
 import { LoginformComponent } from './loginform/loginform.component';
@@ -36,7 +37,7 @@ import { ChatComponent } from './chat/chat.component';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService, IsLoggedInService,QuizzControllerService],
+  providers: [AuthService, IsLoggedInService,QuizzControllerService,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

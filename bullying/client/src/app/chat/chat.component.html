@@ -2,17 +2,19 @@
   chat works!
 </p>
 
-   <div *ngIf="user">
-
-  <div *ngFor="let m of user.message">
-    <p>{{m}}</p>
+   <div *ngIf="message">
+      <div *ngFor=" let m of message">
+    {{m.message}}
   </div>
 </div>
 
 
+
 <form>
-  <textarea rows="4" cols="50" [(ngModel)]="message" name="message">
+  <textarea rows="4" cols="50" [(ngModel)]="messagetosend" name="message">
 
 </textarea>
-    <button (click)="send(this.user._id,message)">Send</button>
+<!-- <div *ngIf="this.user.userRole=='Student'"> -->
+    <button (click)="send(this.user._id,messagetosend)">Send</button>
+
 </form>

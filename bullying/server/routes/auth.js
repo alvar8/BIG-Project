@@ -2,6 +2,7 @@ const express = require('express');
 const passport = require('passport');
 const path = require('path');
 const User = require('../models/User');
+const Message = require('../models/Message');
 const bcrypt = require('bcrypt');
 const debug = require('debug')("angularauth:"+path.basename(__filename).split('.')[0]);
 const upload = require('../config/multer');
@@ -117,24 +118,44 @@ authRoutes.post ('/bro',(req,res,next) =>{
 })
 
 
+// authRoutes.post('/messages',(req,res,next)=>{
+//   const {id} = req.body;
+//   const {message}=req.body;
+//   console.log(id)
+//   console.log(message)
+//   User.findByIdAndUpdate({_id:id}, {$push: {message: message}}, {new:true},(err, user) => {
+//     if (err)
+//       return res.status(500).json({ message: 'Something went wrong' });
+//       res.status(200).json(req.user);
+//   })
+//
+//   User.findOneAndUpdate({refToBrother:id}, {$push: {message: message}}, {new:true},(err, user) => {
+//     if (err)
+//       return res.status(500).json({ message: 'Something went wrong' });
+//       res.status(200).json(req.user);
+//   })
+//
+// })
+
 authRoutes.post('/messages',(req,res,next)=>{
-  const {id} = req.body;
-  const {message}=req.body;
-  console.log(id)
-  console.log(message)
-  User.findByIdAndUpdate({_id:id}, {$push: {message: message}}, {new:true},(err, user) => {
-    if (err)
-      return res.status(500).json({ message: 'Something went wrong' });
-      res.status(200).json(req.user);
+  const {id,message} = req.body;
+    console.log(id)
+    console.log(message)
+    const newMessage = new Message({
+      refToYoungerBrother:id,
+      message:message,
+    }).save()
+    .then(p => res.status(200).json(p))
+    .catch(e => next(e))
   })
 
-  User.findOneAndUpdate({refToBrother:id}, {$push: {message: message}}, {new:true},(err, user) => {
-    if (err)
-      return res.status(500).json({ message: 'Something went wrong' });
-      res.status(200).json(req.user);
+  authRoutes.get('/messages/:id',(req,res,next)=>{
+    const{id}=req.params;
+    console.log(id)
+    Message.find({refToYoungerBrother:id},(err, messages)=>{
+    res.status(200).json(messages);
+  }).catch( e => res.status(500).json({error:e.message}));
   })
-
-})
 
 
 module.exports = authRoutes;
