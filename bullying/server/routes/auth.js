@@ -131,18 +131,32 @@ authRoutes.post ('/bro',(req,res,next) =>{
 // })
 
 authRoutes.post('/messages',(req,res,next)=>{
-  const {id,message,ref} = req.body;
+  const {id,message,ref,name} = req.body;
     console.log(id)
     console.log(message)
     console.log(ref)
     const newMessage = new Message({
       refToYoungerBrother:id,
-      message:message,
+      message:name + ": " + message,
       refToOlderBrother:ref,
     }).save()
     .then(p => res.status(200).json(p))
     .catch(e => next(e))
   })
+
+  authRoutes.post('/bigbrothermessages',(req,res,next)=>{
+    const {id,message,ref,name} = req.body;
+      console.log(id)
+      console.log(message)
+      console.log(ref)
+      const newMessage = new Message({
+        refToOlderBrother:id,
+        message:name + ": " + message,
+        refToYoungerBrother:ref,
+      }).save()
+      .then(p => res.status(200).json(p))
+      .catch(e => next(e))
+    })
 
   authRoutes.get('/messages/:id',(req,res,next)=>{
     const{id}=req.params;

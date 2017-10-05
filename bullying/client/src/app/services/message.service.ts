@@ -29,9 +29,16 @@ export class MessageService {
     return Observable.throw(e.json().message);
   }
 
-  sendmessages(id,message,ref){
+  sendmessages(id,message,ref,name){
     console.log(ref)
-    return this.http.post(`${BASEURL}/messages`, {id,message,ref}, this.options)
+    return this.http.post(`${BASEURL}/messages`, {id,message,ref,name}, this.options)
+      .map(res => res.json())
+      .catch(this.handleError);
+  }
+
+  bigBrotherSendMessages(id,message,ref,name){
+    console.log(ref)
+    return this.http.post(`${BASEURL}/bigbrothermessages`, {id,message,ref,name}, this.options)
       .map(res => res.json())
       .catch(this.handleError);
   }

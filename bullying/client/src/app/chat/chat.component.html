@@ -10,11 +10,17 @@
 
 
 
-<form>
+<form >
+  <input [(ngModel)]="myname" name="myname" type="hidden" value="John Doe"/>
   <textarea rows="4" cols="50" [(ngModel)]="messagetosend" name="message">
 
 </textarea>
-<!-- <div *ngIf="this.user.userRole=='Student'"> -->
-    <button (click)="send(this.user._id,messagetosend,this.user.refToBrother)">Send</button>
+
+ <div *ngIf="user.role=='Student'">
+    <button (click)="send(this.user._id,messagetosend,this.user.refToBrother,myname)">Send</button>
+</div>
+<div *ngIf="user.role=='Tutor'">
+   <button (click)="bigBrotherSend(this.user._id,messagetosend,this.user.refToBrother,myname)">Send</button>
+</div>
 
 </form>
