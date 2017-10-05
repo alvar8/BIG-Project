@@ -109,10 +109,31 @@ authRoutes.post ('/bro',(req,res,next) =>{
   // console.log(updates)
 
   User.findOneAndUpdate({role:"Tutor"}, {$set:{refToBrother:id}}, {new: true},(err, user) => {
+   if (err)
+     return res.status(500).json({ message: 'Something went wrong' });
+     res.status(200).json(req.user);
+ });
+
+})
+
+
+authRoutes.post('/messages',(req,res,next)=>{
+  const {id} = req.body;
+  const {message}=req.body;
+  console.log(id)
+  console.log(message)
+  User.findByIdAndUpdate({_id:id}, {$push: {message: message}}, {new:true},(err, user) => {
     if (err)
       return res.status(500).json({ message: 'Something went wrong' });
       res.status(200).json(req.user);
-  });
+  })
+
+  User.findOneAndUpdate({refToBrother:id}, {$push: {message: message}}, {new:true},(err, user) => {
+    if (err)
+      return res.status(500).json({ message: 'Something went wrong' });
+      res.status(200).json(req.user);
+  })
+
 })
 
 

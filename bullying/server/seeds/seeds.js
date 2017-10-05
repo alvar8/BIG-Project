@@ -3,6 +3,23 @@ const bcrypt = require('bcrypt');
 
 mongoose.connect('mongodb://localhost/bullyingapp');
 
+const User = require('../models/User.js');
+
+const users = [
+  {
+username: "juan",
+password:"1234",
+message:["cuantame", "el que", "que tal"]
+}
+]
+User.create(users, (err, userDocs) => {
+  if (err) { throw(err) }
+  console.log(`Created ${userDocs.length} users`);
+
+});
+
+
+
 const Quizz = require('../models/Quizz.js');
 
 

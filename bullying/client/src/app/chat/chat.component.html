@@ -1,3 +1,14 @@
 <p>
   chat works!
 </p>
+<div>
+  <div>
+  </div>
+</div>
+
+<form>
+  <textarea rows="4" cols="50" [(ngModel)]="message" name="message">
+
+</textarea>
+    <button (click)="send(this.user._id,message)">Send</button>
+</form>

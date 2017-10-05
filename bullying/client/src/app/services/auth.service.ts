@@ -71,4 +71,11 @@ export class AuthService {
         .map(res => res.json())
         .catch(this.handleError);
     }
+
+    send(id,message) {
+      console.log(id)
+      return this.http.post(`${BASEURL}/messages`, {id,message}, this.options)
+        .map(res => res.json())
+        .catch(this.handleError);
+    }
 }
