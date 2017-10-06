@@ -18,8 +18,8 @@ export class SelfieService {
     return Observable.throw(e.json().message);
   }
 
-  createSelfie(ref,id,selfie){
-    return this.http.post(`${BASEURL}/selfie/${id}`, {ref,id,selfie})
+  updateSelfie(ref,id,filename){
+    return this.http.put(`${BASEURL}/selfie/`, {ref,id,filename})
       .map(res => res.json())
       .catch(this.handleError);
   }

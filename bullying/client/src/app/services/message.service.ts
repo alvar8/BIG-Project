@@ -25,7 +25,7 @@ export class MessageService {
     return user;
   }
   private handleError(e) {
-    console.log("Quizz ERROR");
+    console.log("Message ERROR");
     return Observable.throw(e.json().message);
   }
 

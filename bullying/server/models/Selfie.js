@@ -4,9 +4,10 @@ const Schema   = mongoose.Schema;
 const selfieSchema = new mongoose.Schema({
   refToOlderBrother:String,
   refToYoungerBrother:String,
-  selfie:[{
+  selfie:{
     type:String
-  }],
+  },
+  name:String,
   date: { type: Date, default: Date.now },
 },{
     timestamps: {

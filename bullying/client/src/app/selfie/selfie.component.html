@@ -1,10 +1,11 @@
 <form>
   <fieldset>
-    <input type="hidden" [(ngModel)]="newSelfie.refToOlderBrother" name="refToOlderBrother"
-     value="this.user.refToBrother"/>
-     <input type="hidden" [(ngModel)]="newSelfie.refToYoungerBrother" name="refToYoungerBrother"
-      value="this.user._id"/>
+    <input [(ngModel)]="newSelfie.refToOlderBrother" name="refToOlderBrother"
+     value="{{ user?.refToBrother }}" />
+      <input [(ngModel)]="newSelfie.refToYoungerBrother" name="refToYoungerBrother"
+      value="{{ this.user?._id }}"/>
+
      <input type="file" name="file"  id="file" ng2FileSelect [uploader]="uploader" />
   </fieldset>
-  <button (click)="submit()"> submit </button>
+  <button (click)="submit(this.user.refToBrother,this.user._id)"> submit </button>
 </form>
