@@ -75,7 +75,7 @@ authRoutes.get('/loggedin', (req, res, next) => {
   res.status(403).json({ message: 'Unauthorized' });
 });
 
-authRoutes.put ('/edit', upload.single('filename'),(req,res,next) =>{
+authRoutes.post ('/edit', upload.single('filename'),(req,res,next) =>{
   console.log("entro en backend")
   const {username, password, role, picture} = req.body;
     // const userId = req.params.id;

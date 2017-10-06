@@ -35,14 +35,21 @@ export class ChatComponent implements OnInit {
   send(id,message,ref,name){
     console.log(name)
     this.messages.sendmessages(id,message,ref,name).map(user => console.log(user))
-    .subscribe();
+    .subscribe(result=>{
+      this.messages.getmessages(this.userId)
+         .subscribe(message => this.message=message)
+    });
 
   }
 
   bigBrotherSend(id,message,ref,name){
-    console.log(ref)
+    console.log(this.user)
+    console.log(name)
     this.messages.bigBrotherSendMessages(id,message,ref,name).map(user => console.log(user))
-    .subscribe();
+    .subscribe(response => {
+      this.messages.getmessages(this.userId)
+         .subscribe(message => this.message=message)
+      });
 
   }
 
