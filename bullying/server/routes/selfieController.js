@@ -10,7 +10,6 @@ const selfieRoutes = express.Router();
 
 selfieRoutes.post('/', upload.single('file'),(req,res,next) => {
   console.log("entro en backselfie")
-  console.log(`8=========D ${req.body.refToOlderBrother}`);
   const{ref,id}=req.body
   console.log(id)
   const newselfie = new Selfie({
@@ -25,7 +24,6 @@ selfieRoutes.post('/', upload.single('file'),(req,res,next) => {
 });
 
 selfieRoutes.put('/selfie', (req, res, next) => {
-  console.log("siiiii")
   const{ref,id,filename}=req.body
   const updates="";
   Selfie.findOneAndUpdate({name:filename},{refToOlderBrother:ref, refToYoungerBrother:id},{new:true})
@@ -33,5 +31,15 @@ selfieRoutes.put('/selfie', (req, res, next) => {
   .catch(e => next(e))
 
 })
+
+selfieRoutes.get('/',(req,res,next)=>{
+  Selfie.findOne({}, {}, { sort: { 'created_at' : -1 } })
+  .then(result => res.status(200).json(result))
+})
+
+// selfieRoutes.get('/',(req,res,next)=>{
+//   Selfie.findOne().sort({created_at: -1}).exec(function(err, post) {  })
+// })
+
 
 module.exports = selfieRoutes;
