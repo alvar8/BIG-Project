@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 const debug = require('debug')("angularauth:"+path.basename(__filename).split('.')[0]);
 const authRoutes = require('./routes/auth');
 const quizzRoutes = require('./routes/quizzController');
+const selfieRoutes = require('./routes/selfieController');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
@@ -56,6 +57,7 @@ app.use(passport.session());
 
 app.use('/auth', authRoutes);
 app.use('/quizz', quizzRoutes);
+app.use('/selfie', selfieRoutes);
 
 
 // catch 404 and forward to error handler

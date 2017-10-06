@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
+import { SelfieService } from './services/selfie.service';
 import { RouterModule } from '@angular/router';
 import { IsLoggedInService } from './services/is-logged-in.canactivate.service';
 import { QuizzControllerService } from './services/quizz-controller.service';
@@ -18,6 +19,7 @@ import { QuizzComponent } from './quizz/quizz.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { FileSelectDirective } from "ng2-file-upload";
 import { ChatComponent } from './chat/chat.component';
+import { SelfieComponent } from './selfie/selfie.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ChatComponent } from './chat/chat.component';
     QuizzComponent,
     EditprofileComponent,
     FileSelectDirective,
-    ChatComponent
+    ChatComponent,
+    SelfieComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { ChatComponent } from './chat/chat.component';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService, IsLoggedInService,QuizzControllerService,MessageService],
+  providers: [AuthService, IsLoggedInService,QuizzControllerService,MessageService,SelfieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

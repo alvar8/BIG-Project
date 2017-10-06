@@ -8,6 +8,7 @@ import {QuizzComponent} from './quizz/quizz.component';
 import {EditprofileComponent} from './editprofile/editprofile.component'
 import {IsLoggedInService} from './services/is-logged-in.canactivate.service';
 import {ChatComponent} from './chat/chat.component'
+import {SelfieComponent} from './selfie/selfie.component'
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -17,5 +18,6 @@ export const routes: Routes = [
     { path: 'quizz',  component: QuizzComponent,  },
     { path: 'edit/:id', component: EditprofileComponent},
     { path: 'chat/:id', component: ChatComponent},
+    { path: 'selfie/:id', component: SelfieComponent },
     { path: '**', redirectTo: '' }
 ];

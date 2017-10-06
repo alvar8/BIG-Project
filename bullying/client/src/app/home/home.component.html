@@ -6,6 +6,8 @@
   <li><a [routerLink]="['/quizz']">Quizz</a></li>
   <div *ngIf="user.role=='Student'">
   <li><a [routerLink]="['/chat',user._id]">Chat</a></li>
+  <li><a [routerLink]="['/selfie',user._id]">Selfie</a></li>
+
 
 </div>
 <div *ngIf="user.role=='Tutor'">

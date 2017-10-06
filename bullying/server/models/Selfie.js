@@ -1,13 +1,21 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
-const messageSchema = new mongoose.Schema({
-    refToOlderBrother:String,
-    refToYoungerBrother:String,
-    message:String,
-    date: { type: Date, default: Date.now }
+const selfieSchema = new mongoose.Schema({
+  refToOlderBrother:String,
+  refToYoungerBrother:String,
+  selfie:[{
+    type:String
+  }],
+  date: { type: Date, default: Date.now },
+},{
+    timestamps: {
+      createdAt: "created_at",
+      updatedAt: "updated_at"
+    }
+
 });
 
-const Message = mongoose.model('Message', messageSchema);
+const Selfie = mongoose.model('Selfie', selfieSchema);
 
-module.exports = Message;
+module.exports = Selfie;
