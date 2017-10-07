@@ -1,17 +1,9 @@
-<p>
-  home works!
-</p>
+
 <div *ngIf="user">
+  <ul>
   <li><a [routerLink]="['/user']">User Profile</a></li>
+  <li><a [routerLink]="['/brother']">Brother</a></li>
   <li><a [routerLink]="['/quizz']">Quizz</a></li>
-  <div *ngIf="user.role=='Student'">
-  <li><a [routerLink]="['/chat',user._id]">Chat</a></li>
-  <li><a [routerLink]="['/selfie',user._id]">Selfie</a></li>
-
-
-</div>
-<div *ngIf="user.role=='Tutor'">
-  <li><a [routerLink]="['/chat',user.refToBrother]">Chat</a></li>
-
-</div>
+  <li><a [routerLink]="['/mail']">Buzón virtual</a></li>
+</ul>
 </div>

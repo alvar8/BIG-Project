@@ -1,0 +1,10 @@
+<div *ngIf="user">
+  <div *ngIf="user.role=='Student'">
+  <li><a [routerLink]="['/chat',user._id]">Chat</a></li>
+  <li><a [routerLink]="['/selfie',user._id]">Selfie</a></li>
+</div>
+<div *ngIf="user.role=='Tutor'">
+  <li><a [routerLink]="['/chat',user.refToBrother]">Chat</a></li>
+  <li><a [routerLink]="['/selfie',user.refToBrother]">Selfie</a></li>
+</div>
+</div>

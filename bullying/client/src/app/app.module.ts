@@ -22,6 +22,12 @@ import { FileSelectDirective } from "ng2-file-upload";
 import { ChatComponent } from './chat/chat.component';
 import { SelfieComponent } from './selfie/selfie.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { IndexComponent } from './index/index.component';
+import { BrotherComponent } from './brother/brother.component';
+import { MailComponent } from './mail/mail.component';
+import { ProfileComponent } from './userprofile/profile/profile.component';
+import { TodoComponent } from './userprofile/todo/todo.component';
+import { PointsComponent } from './userprofile/points/points.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,13 @@ import { NavbarComponent } from './navbar/navbar.component';
     FileSelectDirective,
     ChatComponent,
     SelfieComponent,
-    NavbarComponent
+    NavbarComponent,
+    IndexComponent,
+    BrotherComponent,
+    MailComponent,
+    ProfileComponent,
+    TodoComponent,
+    PointsComponent
   ],
   imports: [
     BrowserModule,
