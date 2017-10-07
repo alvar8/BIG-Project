@@ -23,4 +23,10 @@ export class SelfieService {
       .map(res => res.json())
       .catch(this.handleError);
   }
+
+  getLastSelfie(id){
+    return this.http.get(`${BASEURL}/${id}`)
+      .map(res => res.json())
+      .catch(this.handleError);
+  }
   }

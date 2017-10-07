@@ -32,14 +32,11 @@ selfieRoutes.put('/selfie', (req, res, next) => {
 
 })
 
-selfieRoutes.get('/',(req,res,next)=>{
-  Selfie.findOne({}, {}, { sort: { 'created_at' : -1 } })
+selfieRoutes.get('/:id',(req,res,next)=>{
+  const{id}=req.params;
+  Selfie.findOne({refToYoungerBrother:id}, {}, { sort: { 'created_at' : -1 } })
   .then(result => res.status(200).json(result))
 })
-
-// selfieRoutes.get('/',(req,res,next)=>{
-//   Selfie.findOne().sort({created_at: -1}).exec(function(err, post) {  })
-// })
 
 
 module.exports = selfieRoutes;
