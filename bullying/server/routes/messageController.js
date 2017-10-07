@@ -14,6 +14,4 @@ messageRoutes.get('/messages', (req, res, next) => {
 )
 })
 
-
-
 module.exports = messageRoutes;
