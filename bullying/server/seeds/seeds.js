@@ -18,6 +18,19 @@ User.create(users, (err, userDocs) => {
 
 });
 
+const ToDo = require('../models/ToDo.js');
+
+const todos = [
+  {
+todo: ["Come con tu hermano","Preguntale que tal está","Juega con el"]
+}
+]
+ToDo.create(todos, (err, todoDocs) => {
+  if (err) { throw(err) }
+  console.log(`Created ${todoDocs.length} todos`);
+
+});
+
 
 
 const Quizz = require('../models/Quizz.js');

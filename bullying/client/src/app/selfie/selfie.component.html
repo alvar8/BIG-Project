@@ -1,6 +1,6 @@
 <div *ngIf="selfie">
   {{selfie.selfie}}
-<img src="../../../../server{{selfie.selfie}}" />
+<img [src]="selfie.selfie" class="img"/>
 </div>
 
 
