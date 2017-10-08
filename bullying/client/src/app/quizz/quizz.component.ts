@@ -13,6 +13,7 @@ export class QuizzComponent implements OnInit {
   randomNumber;
   userRole;
   user;
+  counter:any = 0;
   constructor(public controller:QuizzControllerService, public log:IsLoggedInService) { }
 
   ngOnInit() {
@@ -24,6 +25,11 @@ export class QuizzComponent implements OnInit {
   }
 
   getRandomNumber(){
+    if(this.counter<4){
+      this.counter++;
+    }else{
+      this.counter=0;
+    }
     this.randomNumber=Math.round((Math.random()*3))
     console.log(this.randomNumber);
   }

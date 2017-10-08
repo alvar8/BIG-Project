@@ -11,6 +11,10 @@ const userSchema = new mongoose.Schema({
     enum : ["Admin", "Tutor", "Student"],
     default : "Student"
   },
+  point:{
+    type:Number,
+    default:0
+  },
   email:String,
   password: {
     type: String,

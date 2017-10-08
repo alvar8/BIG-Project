@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {TodoService} from '../../services/todo.service';
+import { TodoService } from '../../services/todo.service';
 
 @Component({
   selector: 'app-todo',
@@ -14,6 +14,7 @@ randomNumber3;
   constructor(public todoget: TodoService) { }
 
   ngOnInit() {
+    console.log("heyyyy")
     this.todoget.getToDo().subscribe(todolist => this.todos=todolist);
     this.randomNumber1=Math.round((Math.random()*3))
     this.randomNumber2=Math.round((Math.random()*3))

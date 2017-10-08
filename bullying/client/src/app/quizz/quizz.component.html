@@ -2,18 +2,28 @@
   quizz works!
 </p>
 <div *ngIf="this.userRole=='Tutor'">
+<div *ngIf="this.counter=='0'">
+  <p>Introducción</p>
+</div>
+<div *ngIf="this.counter >='1'&& this.counter<'4'">
 <div *ngIf="this.tutorQuizz">
   <p>{{this.tutorQuizz[this.randomNumber][0].question }}</p>
   <form>
-  <input type="radio" name="answer" value="{{this.tutorQuizz[this.randomNumber][0].answer[0]}}">
+  <input type="radio" name="answer" value="{{this.tutorQuizz[this.randomNumber][0].answer[0].value}}">
   {{this.tutorQuizz[this.randomNumber][0].answer[0]}}<br>
   <input type="radio" name="answer" value="{{this.tutorQuizz[this.randomNumber][0].answer[0]}}">
   {{this.tutorQuizz[this.randomNumber][0].answer[1]}}<br>
-  <button (click)="this.getRandomNumber()">Next</button>
 </form>
 </div>
 </div>
+<div *ngIf="this.counter=='4'">
+  <p>Thanks for doing the quizz</p>
+</div>
+<button (click)="this.getRandomNumber()">Next</button>
+</div>
+
 <div *ngIf="this.userRole=='Student'">
+
 <div *ngIf="this.studentQuizz">
   <p>{{this.studentQuizz[this.randomNumber][0].question }}</p>
   <p>{{this.studentQuizz[this.randomNumber][0].answer[0]}}</p>
