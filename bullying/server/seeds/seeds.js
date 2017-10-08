@@ -40,20 +40,44 @@ const Quizz = require('../models/Quizz.js');
   const quizzs = [{
   studentQuizz:[{
     question : "como?",
-    answer : ["ad","c"]
+    answer : [{
+      answer: "aa",
+      value: 20,
+    },{
+      answer:"fdgw",
+      value: 40,
+    }]
   }],
   tutorQuizz:[{
     question : "que?",
-    answer : ["o","u"]
+    answer : [{
+      answer: "ie",
+      value: 20,
+    },{
+      answer:"asdf",
+      value: 40,
+    }]
   }]
 },{
   studentQuizz:[{
     question : "hh?",
-    answer : ["w","k"]
+    answer : [{
+      answer: "uu",
+      value: 20,
+    },{
+      answer:"ooo",
+      value: 40,
+    }]
   }],
   tutorQuizz:[{
     question : "cuando",
-    answer : ["12","34"]
+    answer : [{
+      answer: "12",
+      value: 20,
+    },{
+      answer:"34",
+      value: 40,
+    }]
   }]
 }
 
