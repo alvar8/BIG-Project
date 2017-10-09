@@ -16,7 +16,9 @@ export class DataemotionService {
 
     return this.http.post(this.url, {url: imageUrl}, options)
     .map(data => data.json())
-    .do(result => console.log(result))
-  }
+    .do(result => Object.keys(result[0].scores))//.some(function(key) {
+   //console.log (result[0].scores[key] < 1)
+ //}))
 
+}
 }
