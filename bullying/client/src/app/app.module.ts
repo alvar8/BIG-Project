@@ -12,6 +12,7 @@ import { IsLoggedInService } from './services/is-logged-in.canactivate.service';
 import { QuizzControllerService } from './services/quizz-controller.service';
 import { MessageService } from './services/message.service';
 import { TodoService } from './services/todo.service';
+import { DataemotionService } from './services/dataemotion.service';
 import {routes} from './routes';
 import { HomeComponent } from './home/home.component';
 import { LoginformComponent } from './loginform/loginform.component';
@@ -57,7 +58,7 @@ import { PointsComponent } from './userprofile/points/points.component';
     RouterModule.forRoot(routes),
     AlertModule.forRoot()
   ],
-  providers: [AuthService, IsLoggedInService,QuizzControllerService,MessageService,SelfieService, TodoService],
+  providers: [AuthService, IsLoggedInService,QuizzControllerService,MessageService,SelfieService, TodoService, DataemotionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

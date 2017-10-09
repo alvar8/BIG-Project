@@ -4,6 +4,7 @@ import { FileUploader } from "ng2-file-upload";
 import { AuthService } from '../services/auth.service';
 import { SelfieService } from '../services/selfie.service';
 import { ActivatedRoute } from '@angular/router';
+import { DataemotionService } from '../services/dataemotion.service';
 
 
 @Component({
@@ -23,7 +24,13 @@ export class SelfieComponent implements OnInit {
   userId:String;
   selfie;
   feedback: string;
-  constructor(public auth: AuthService, public self: SelfieService,private route: ActivatedRoute) { }
+  imageUrl:String;
+  personEmotion:String;
+  urlimg='http://localhost:3000';
+  constructor(public auth: AuthService, public self: SelfieService,private route: ActivatedRoute,
+  private data: DataemotionService) {
+    this.imageUrl= ''
+   }
 
   ngOnInit() {
     this.user = this.auth.getUser();
@@ -47,5 +54,12 @@ export class SelfieComponent implements OnInit {
     .subscribe()
 
   }
+
+  getPersonEmotion(imageUrl:String){
+    console.log(imageUrl)
+    this.data.getPersonEmotion(imageUrl).subscribe(data=>
+    this.personEmotion=data)
+  }
+
 
 }
