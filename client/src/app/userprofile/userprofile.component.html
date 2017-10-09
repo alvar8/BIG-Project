@@ -1,0 +1,16 @@
+<div *ngIf="!user">
+  <h2>NO USER LOGGED IN</h2>
+</div>
+
+<div *ngIf="user">
+
+  <!-- <pre> {{ user | json }} </pre> -->
+  <ul>
+<li><a [routerLink]="['/profile']">Mis datos</a></li>
+<li><a [routerLink]="['/mail']">Reportar</a></li>
+<li><a [routerLink]="['/todo']">To Do</a></li>
+<li><a [routerLink]="['/points']">Puntos</a></li>
+  </ul>
+</div>
+
+<button (click)="getabro(this.user._id)">Get a brother</button>

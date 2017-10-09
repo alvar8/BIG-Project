@@ -1,0 +1,36 @@
+<p>
+  quizz works!
+</p>
+<div *ngIf="this.userRole=='Tutor'">
+  <div *ngIf="this.counter=='0'">
+    <p>Introducción</p>
+  </div>
+  <div *ngIf="this.counter >='1'&& this.counter<'4'">
+    <div *ngIf="this.tutorQuizz">
+      <h3>{{this.counter}}/3</h3>
+      <p>{{this.tutorQuizz[this.randomNumber][0].question }}</p>
+      <form>
+        <input type="radio" name="answer" value="{{this.tutorQuizz[this.randomNumber][0].answer[0].value}}"> {{this.tutorQuizz[this.randomNumber][0].answer[0].answer}}
+        <br>
+        <input type="radio" name="answer" value="{{this.tutorQuizz[this.randomNumber][0].answer[0].value}}"> {{this.tutorQuizz[this.randomNumber][0].answer[1].answer}}
+        <br>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="this.counter=='4'">
+    <p>Thanks for doing the quizz</p>
+  </div>
+  <button (click)="this.getRandomNumber()">Next</button>
+</div>
+
+<div *ngIf="this.userRole=='Student'">
+
+  <div *ngIf="this.studentQuizz">
+    <h3>{{this.counter}}/3</h3>
+    <p>{{this.studentQuizz[this.randomNumber][0].question }}</p>
+    <p>{{this.studentQuizz[this.randomNumber][0].answer[0]}}</p>
+    <p>{{this.studentQuizz[this.randomNumber][0].answer[1]}}</p>
+    <button (click)="this.getRandomNumber()">Next</button>
+  </div>
+</div>
+<p>{{this.userRole}}</p>
