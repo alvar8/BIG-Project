@@ -25,8 +25,10 @@ export class SelfieComponent implements OnInit {
   selfie;
   feedback: string;
   imageUrl:String;
-  personEmotion:String;
+  personEmotion;
+  mainemotion;
   urlimg='http://localhost:3000';
+
   constructor(public auth: AuthService, public self: SelfieService,private route: ActivatedRoute,
   private data: DataemotionService) {
     this.imageUrl= ''
@@ -58,8 +60,23 @@ export class SelfieComponent implements OnInit {
   getPersonEmotion(imageUrl:String){
     console.log(imageUrl)
     this.data.getPersonEmotion(imageUrl).subscribe(data=>
-    this.personEmotion=data)
+    console.log(this.personEmotion=this.getScore(data[0].scores)))
   }
 
+  getScore(objScores) {
+    let scoresArr = Object.entries(objScores);
+    let maxEmotion = {
+      name: '',
+      score: 0
+    }
+    for (let i = 0; i < scoresArr.length - 1; i++) {
+      console.log(scoresArr[i][1])
+      if (scoresArr[i][1] > maxEmotion.score) {
+        maxEmotion.name = scoresArr[i][0];
+        maxEmotion.score = scoresArr[i][1];
+      }
+    }
+    return maxEmotion;
+  }
 
 }
