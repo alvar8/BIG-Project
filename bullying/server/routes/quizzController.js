@@ -3,12 +3,12 @@ const passport = require('passport');
 const path = require('path');
 const Quizz = require('../models/Quizz');
 const bcrypt = require('bcrypt');
-const debug = require('debug')("angularauth:"+path.basename(__filename).split('.')[0]);
+const debug = require('debug')("angularauth:" + path.basename(__filename).split('.')[0]);
 
 const quizzRoutes = express.Router();
 
 quizzRoutes.get('/student', (req, res, next) => {
-  Quizz.find({},(err, quizzs) => {
+  Quizz.find({}, (err, quizzs) => {
     var quizzMap = [];
 
     quizzs.forEach(quizz => {
@@ -16,11 +16,11 @@ quizzRoutes.get('/student', (req, res, next) => {
     })
 
     res.send(quizzMap);
-})
+  })
 })
 
 quizzRoutes.get('/tutor', (req, res, next) => {
-  Quizz.find({},(err, quizzs) => {
+  Quizz.find({}, (err, quizzs) => {
     var quizzMap = [];
 
     quizzs.forEach(quizz => {
@@ -28,7 +28,7 @@ quizzRoutes.get('/tutor', (req, res, next) => {
     })
 
     res.send(quizzMap);
-})
+  })
 })
 
 module.exports = quizzRoutes;
