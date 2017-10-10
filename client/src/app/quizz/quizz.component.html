@@ -16,8 +16,11 @@
   </div>
   <div *ngIf="this.counter=='4'">
     <p>Thanks for doing the quizz</p>
+    <button (click)="this.goBack()">Go Back</button>
   </div>
+  <div *ngIf="this.counter<'4'">
   <button (click)="this.getRandomNumber()">Next</button>
+</div>
 </div>
 
 <div *ngIf="this.userRole=='Student'">
