@@ -1,0 +1,22 @@
+.img{
+  background-image: url(../../assets/img1.png);
+  height: 100vh;
+  font-family: Apercu;
+}
+.btn{
+  margin-bottom:10%;
+  background-color: black;
+  color:#FFF;
+  font-size: 14px;
+	line-height: 1.14;
+  width: 120px;
+	height: 40px;
+	border-radius: 100px;
+	background-color: #000000;
+}
+
+.text{
+  margin:10% 13% 10% 13%;
+  font-size: 36px;
+	line-height: 1.11;
+}

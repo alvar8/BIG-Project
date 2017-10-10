@@ -1,9 +1,15 @@
-
+<div class="img">
 <div *ngIf="user">
-  <ul>
-  <li><a [routerLink]="['/user']">User Profile</a></li>
-  <li><a [routerLink]="['/brother']">Brother</a></li>
+  <ul class="home">
+  <li><a [routerLink]="['/user']">Mi perfil</a></li>
+  <div *ngIf="user.role=='Tutor'">
+  <li><a [routerLink]="['/brother']">Hermano Menor</a></li>
+</div>
+<div *ngIf="user.role=='Student'">
+<li><a [routerLink]="['/brother']">Hermano Mayor</a></li>
+</div>
   <li><a [routerLink]="['/quizz']">Quizz</a></li>
   <li><a [routerLink]="['/mail']">Buzón virtual</a></li>
 </ul>
+</div>
 </div>

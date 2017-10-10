@@ -49,4 +49,11 @@ isLoggedIn() {
     .map(user => this.emitUserLoginEvent(user))
     .catch(this.handleError);
 }
+
+sendPoints(id,points){
+  return this.http.post(`${BASEURL}/points`,{id,points}, this.options)
+  .map(res => res.json())
+  .catch(this.handleError);
+}
+
 }

@@ -1,0 +1,23 @@
+.img{
+  background-image: url(../../assets/img1.png);
+  height: 100vh;
+  font-family: Apercu;
+}
+.home{
+  list-style-type: none;
+  width: 329px;
+	height: 348px;
+	font-family: Apercu;
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 1.32;
+	text-align: left;
+	color: #000000;
+  padding-top: 50%;
+}
+.home a{
+  color:#000;
+}
+.home a:hover {
+    color: #0074cd;
+}

@@ -8,7 +8,6 @@ const User = require('../models/User.js');
 const users = [{
   username: "juan",
   password: "1234",
-  message: ["cuantame", "el que", "que tal"]
 }]
 User.create(users, (err, userDocs) => {
   if (err) {
@@ -21,7 +20,7 @@ User.create(users, (err, userDocs) => {
 const ToDo = require('../models/ToDo.js');
 
 const todos = [{
-  todo: ["Come con tu hermano", "Preguntale que tal está", "Juega con el"]
+  todo: ["¿Has comido con tu hermano pequeño?", "¿Conoces a sus amigos de clase?", "Mejor/Peor primera semana"]
 }]
 ToDo.create(todos, (err, todoDocs) => {
   if (err) {
@@ -39,49 +38,74 @@ const Quizz = require('../models/Quizz.js');
 
 const quizzs = [{
     studentQuizz: [{
-      question: "como?",
+      question: "¿Cuantos tipos de bullying o acoso escolar conoces?",
       answer: [{
-        answer: "aa",
-        value: 20,
-      }, {
-        answer: "fdgw",
-        value: 40,
-      }]
-    }],
+        answer: "",
+        value: 2,
+      }],
     tutorQuizz: [{
-      question: "que?",
+      question: "¿Cuantos tipos de bullying o acoso escolar conoces?",
       answer: [{
-        answer: "ie",
-        value: 20,
-      }, {
-        answer: "asdf",
-        value: 40,
+        answer: "",
+        value: 2,
       }]
     }]
   }, {
     studentQuizz: [{
-      question: "hh?",
+      question: "¿Qué diferencia hay entre una broma y un caso de acoso?",
       answer: [{
-        answer: "uu",
-        value: 20,
+        answer: "Una broma es algo puntual y no hay que darle más importancia",
+        value: 3,
       }, {
-        answer: "ooo",
-        value: 40,
+        answer: "Si se repite, y cada vez es más pesado, deja de ser una broma",
+        value: 4,
+      },{
+        answer: "Cuando los compañeros se ríen, es una broma",
+        value: 1,
       }]
     }],
     tutorQuizz: [{
-      question: "cuando",
+      question: "¿Qué diferencia hay entre una broma y un caso de acoso?",
       answer: [{
-        answer: "12",
-        value: 20,
+        answer: "Una broma es algo puntual y no hay que darle más importancia",
+        value: 3,
       }, {
-        answer: "34",
-        value: 40,
+        answer: "Si se repite, y cada vez es más pesado, deja de ser una broma",
+        value: 4,
+      },{
+        answer: "Cuando los compañeros se ríen, es una broma",
+        value: 1,
       }]
     }]
-  }
-
-];
+  },{
+    studentQuizz: [{
+      question: "Cuando descubres una conversación en RRSS en la que están acosando a un compañero... ¿qué piensas?",
+      answer: [{
+        answer: "Leo los comentarios y me río, pero no participo.",
+        value: 1,
+      }, {
+        answer: "Participo de la broma, es solo eso, una broma.",
+        value: 0,
+      },{
+        answer: "Me pongo en contacto con el hermano mayor de la víctima e informo al centro de lo ocurrido.",
+        value: 4,
+      }]
+    }],
+    tutorQuizz: [{
+      question: "Cuando descubres una conversación en RRSS en la que están acosando a un compañero... ¿qué piensas?",
+      answer: [{
+        answer: "Leo los comentarios y me río, pero no participo.",
+        value: 1,
+      }, {
+        answer: "Participo de la broma, es solo eso, una broma.",
+        value: 0,
+      },{
+        answer: "Me pongo en contacto con el hermano mayor de la víctima e informo al centro de lo ocurrido.",
+        value: 4,
+      }]
+    }]
+  }]
+}];
 
 
 Quizz.create(quizzs, (err, quizzDocs) => {

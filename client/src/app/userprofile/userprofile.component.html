@@ -1,3 +1,5 @@
+<div class="img">
+<h2 class="myprofileHeader">Mi Perfil</h2>
 <div *ngIf="!user">
   <h2>NO USER LOGGED IN</h2>
 </div>
@@ -5,7 +7,7 @@
 <div *ngIf="user">
 
   <!-- <pre> {{ user | json }} </pre> -->
-  <ul>
+  <ul class="home">
 <li><a [routerLink]="['/profile']">Mis datos</a></li>
 <li><a [routerLink]="['/mail']">Reportar</a></li>
 <li><a [routerLink]="['/todo']">To Do</a></li>
@@ -13,4 +15,7 @@
   </ul>
 </div>
 
+<div *ngIf="user.role=='Student' && user.refToBrother==''">
 <button (click)="getabro(this.user._id)">Get a brother</button>
+</div>
+</div>

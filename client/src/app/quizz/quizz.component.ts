@@ -15,6 +15,9 @@ export class QuizzComponent implements OnInit {
   userRole;
   user;
   counter: any = 0;
+  formInfo = {
+    answer: ""
+  }
   constructor(public controller: QuizzControllerService, public log: IsLoggedInService,
   private router: Router) { }
 
@@ -33,10 +36,19 @@ export class QuizzComponent implements OnInit {
       this.counter = 0;
     }
     this.randomNumber = Math.round((Math.random() * 3))
-    console.log(this.randomNumber);
+    //console.log(this.randomNumber);
   }
 
   goBack(){
     this.router.navigate(['/home'])
   }
+
+  getPoints(user){
+    const answer = this.formInfo;
+    const id=user;
+    this.controller.sendPoints(id,answer)
+    .map(res => console.log(res))
+    .subscribe(r=> console.log(r));
+  }
+
 }

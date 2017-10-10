@@ -2,10 +2,14 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 const messageSchema = new mongoose.Schema({
-    refToOlderBrother:String,
-    refToYoungerBrother:String,
+    refToOlderBrother:Schema.Types.ObjectId,
+    refToYoungerBrother:Schema.Types.ObjectId,
     message:String,
-    date: { type: Date, default: Date.now }
+},{
+  timestamps: {
+    createdAt: "created_at",
+    updatedAt: "updated_at"
+  }
 });
 
 const Message = mongoose.model('Message', messageSchema);

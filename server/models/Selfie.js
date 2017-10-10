@@ -2,13 +2,10 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 const selfieSchema = new mongoose.Schema({
-  refToOlderBrother:String,
-  refToYoungerBrother:String,
-  selfie:{
-    type:String
-  },
+  refToOlderBrother:{type:Schema.Types.ObjectId, ref:'User'},
+  refToYoungerBrother:{type:Schema.Types.ObjectId, ref:'User'},
+  selfie:String,
   name:String,
-  date: { type: Date, default: Date.now },
 },{
     timestamps: {
       createdAt: "created_at",
