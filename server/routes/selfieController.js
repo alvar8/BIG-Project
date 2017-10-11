@@ -34,7 +34,7 @@ selfieRoutes.put('/selfie', (req, res, next) => {
 
 selfieRoutes.get('/:id',(req,res,next)=>{
   const{id}=req.params;
-  Selfie.findOne({refToYoungerBrother:id}, {}, { sort: { 'created_at' : -1 } })
+  Selfie.findOne({ $or:[{refToYoungerBrother:id},{refToOlderBrother:id}]}, {}, { sort: { 'created_at' : -1 } })
   .then(result => res.status(200).json(result))
 })
 
