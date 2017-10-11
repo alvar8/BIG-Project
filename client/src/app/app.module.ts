@@ -31,6 +31,9 @@ import { ProfileComponent } from './userprofile/profile/profile.component';
 import { TodoComponent } from './userprofile/todo/todo.component';
 import { PointsComponent } from './userprofile/points/points.component';
 
+import { FileUploadModule } from "ng2-file-upload";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +57,7 @@ import { PointsComponent } from './userprofile/points/points.component';
   imports: [
     BrowserModule,
     FormsModule,
+    FileUploadModule,
     HttpModule,
     RouterModule.forRoot(routes),
     AlertModule.forRoot()

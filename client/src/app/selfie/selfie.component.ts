@@ -8,7 +8,7 @@ import { DataemotionService } from '../services/dataemotion.service';
 import {environment} from '../../environments/environment';
 
 const BASEURL:string = environment.BASEURL + "/selfie";
-
+const BASEURLSelf:string = environment.BASEURL
 @Component({
   selector: 'app-selfie',
   templateUrl: './selfie.component.html',
@@ -29,7 +29,7 @@ export class SelfieComponent implements OnInit {
   imageUrl:String;
   personEmotion;
   mainemotion;
-  urlimg=BASEURL;
+  urlimg=BASEURLSelf;
 
   constructor(public auth: AuthService, public self: SelfieService,private route: ActivatedRoute,
   private data: DataemotionService) {
