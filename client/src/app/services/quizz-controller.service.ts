@@ -26,14 +26,8 @@ private emitUserLoginEvent(user){
   return user;
 }
 
-getStudentQuizz(){
-  return this.http.get(`${BASEURL}/student`, this.options)
-  .map(res => res.json())
-  .catch(this.handleError);
-}
-
-getTutorQuizz(){
-  return this.http.get(`${BASEURL}/tutor`, this.options)
+getQuizz(){
+  return this.http.get(`${BASEURL}/`, this.options)
   .map(res => res.json())
   .catch(this.handleError);
 }

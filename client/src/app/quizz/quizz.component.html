@@ -1,43 +1,38 @@
 <div class="img">
 <h3>Quizz</h3>
-<div *ngIf="this.userRole=='Tutor'">
+<div *ngIf="user">
   <div *ngIf="this.counter=='0'" class="introduction">
     <p>Hola {{this.user.username}}</p>
     <p>Con tu ayuda, vamos a hacer algo grande, eliminar el acoso de las aulas. ¿Estás preparado para esta misión?</p>
     <button (click)="this.getRandomNumber()" class="btn">Siguinte</button>
   </div>
   <div *ngIf="this.counter >='1'&& this.counter<'4'">
-    <div *ngIf="this.tutorQuizz">
+    <!-- {{ this.Quizz | json}} -->
       <h3>{{this.counter}}/3</h3>
-      <p>{{this.tutorQuizz[this.randomNumber][0].question }}</p>
-      <form>
-        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.tutorQuizz[this.randomNumber][0].answer[0].value}}"> {{this.tutorQuizz[this.randomNumber][0].answer[0].answer}}
+      <p>{{this.Quizz[0].Quizz[1].question }}</p>
+  <div *ngIf="this.quizzcounter=='0'">
+    <form>
+      <textarea [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}"rows="4" cols="50">
+      </textarea>
+     <button (click)="this.getRandomNumber(); this.getPoints(this.user._id)">Next</button>
+   </form>
+  </div>
+  <div *ngIf="this.quizzcounter>'0' && this.quizzcounter<3">
+       <form>
+        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[0].answer}}
         <br>
-        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.tutorQuizz[this.randomNumber][0].answer[0].value}}"> {{this.tutorQuizz[this.randomNumber][0].answer[1].answer}}
+        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[1].value}}"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[1].answer}}
+        <br>
+        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].value}}"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[2].answer}}
         <br>
         <button (click)="this.getRandomNumber(); this.getPoints(this.user._id)">Next</button>
       </form>
-    </div>
+</div>
   </div>
   <div *ngIf="this.counter=='4'">
     <p>Thanks for doing the quizz</p>
     <button (click)="this.goBack()">Go Back</button>
   </div>
 
-</div>
-
-
-
-
-
-<div *ngIf="this.userRole=='Student'">
-
-  <div *ngIf="this.studentQuizz">
-    <h3>{{this.counter}}/3</h3>
-    <p>{{this.studentQuizz[this.randomNumber][0].question }}</p>
-    <p>{{this.studentQuizz[this.randomNumber][0].answer[0]}}</p>
-    <p>{{this.studentQuizz[this.randomNumber][0].answer[1]}}</p>
-    <button (click)="this.getRandomNumber()">Next</button>
-  </div>
 </div>
 </div>

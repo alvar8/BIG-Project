@@ -9,11 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./quizz.component.css']
 })
 export class QuizzComponent implements OnInit {
-  studentQuizz;
-  tutorQuizz;
-  randomNumber;
+  Quizz;
   userRole;
   user;
+  quizzcounter: number= -1;
   counter: any = 0;
   formInfo = {
     answer: ""
@@ -22,9 +21,7 @@ export class QuizzComponent implements OnInit {
   private router: Router) { }
 
   ngOnInit() {
-    this.controller.getStudentQuizz().subscribe(quizz => this.studentQuizz = quizz);
-    this.controller.getTutorQuizz().subscribe(quizz2 => this.tutorQuizz = quizz2);
-    this.randomNumber = Math.round((Math.random() * 3))
+    this.controller.getQuizz().subscribe(quizz => this.Quizz = quizz);
     this.user = this.log.user
     this.userRole = this.user.role
   }
@@ -35,8 +32,13 @@ export class QuizzComponent implements OnInit {
     } else {
       this.counter = 0;
     }
-    this.randomNumber = Math.round((Math.random() * 3))
-    //console.log(this.randomNumber);
+    if(this.quizzcounter<3){
+      console.log('entro a sumar')
+      this.quizzcounter++
+      console.log(this.quizzcounter)
+    }else{
+      this.quizzcounter=-1
+    }
   }
 
   goBack(){
@@ -45,6 +47,13 @@ export class QuizzComponent implements OnInit {
 
   getPoints(user){
     const answer = this.formInfo;
+    console.log("ANSWER", answer)
+    console.log("TIPO", typeof(answer.answer))
+    console.log("LONG", (answer.answer).length)
+    // if(typeof(answer) !== "number"){
+    //   this.formInfo = {answer : 2}
+    // }
+    console.log(answer)
     const id=user;
     this.controller.sendPoints(id,answer)
     .map(res => console.log(res))

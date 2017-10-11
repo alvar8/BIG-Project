@@ -103,10 +103,18 @@ authRoutes.post ('/bro',(req,res,next) =>{
   const {id} = req.body;
   console.log(id)
 
-  User.findOneAndUpdate({role:"Tutor",refToBrother:""}, {$set:{refToBrother:id}}, {new: true})
-  .then(result =>
+  User.findOneAndUpdate(
+    {role:"Tutor", refToBrother:null },
+    {$set:
+      {
+        refToBrother: id,
+      }
+    },
+    {new: true}
+  )
+    .then(result =>
     User.findByIdAndUpdate(id, {$set:{refToBrother:result._id}}, {new: true})
-    .then( result2 => res.status(200).json(result2))
+   .then( result2 => res.status(200).json(result2))
 )
 })
 

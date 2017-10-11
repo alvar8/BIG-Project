@@ -8,28 +8,10 @@ const debug = require('debug')("angularauth:" + path.basename(__filename).split(
 
 const quizzRoutes = express.Router();
 
-quizzRoutes.get('/student', (req, res, next) => {
-  Quizz.find({}, (err, quizzs) => {
-    var quizzMap = [];
-
-    quizzs.forEach(quizz => {
-      quizzMap.push(quizz.studentQuizz)
-    })
-
-    res.send(quizzMap);
-  })
-})
-
-quizzRoutes.get('/tutor', (req, res, next) => {
-  Quizz.find({}, (err, quizzs) => {
-    var quizzMap = [];
-
-    quizzs.forEach(quizz => {
-      quizzMap.push(quizz.tutorQuizz)
-    })
-
-    res.send(quizzMap);
-  })
+quizzRoutes.get('/', (req, res, next) => {
+  Quizz.find({})
+  .then((quizzs)=>res.status(200).json(quizzs))
+  .catch( e => res.status(500).json({error:e.message}))
 })
 
 quizzRoutes.post('/points',(req,res,next)=>{

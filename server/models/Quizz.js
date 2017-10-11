@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const quizzSchema = new mongoose.Schema({
-  studentQuizz:[{
+  Quizz:[{
     question : String,
     answer : [{
       answer:String,
@@ -11,17 +11,6 @@ const quizzSchema = new mongoose.Schema({
       }
     }],
   }],
-
-  tutorQuizz:[{
-    question : String,
-    answer : [{
-      answer:String,
-      value:{
-        type:Number,
-        default:20
-      }
-    }]
-     }]
 });
 
 const Quizz = mongoose.model('Quizz', quizzSchema);

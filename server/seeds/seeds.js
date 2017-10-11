@@ -37,21 +37,14 @@ const Quizz = require('../models/Quizz.js');
 
 
 const quizzs = [{
-    studentQuizz: [{
+    Quizz: [{
       question: "¿Cuantos tipos de bullying o acoso escolar conoces?",
       answer: [{
         answer: "",
         value: 2,
       }],
-    tutorQuizz: [{
-      question: "¿Cuantos tipos de bullying o acoso escolar conoces?",
-      answer: [{
-        answer: "",
-        value: 2,
-      }]
-    }]
-  }, {
-    studentQuizz: [{
+  },
+    {
       question: "¿Qué diferencia hay entre una broma y un caso de acoso?",
       answer: [{
         answer: "Una broma es algo puntual y no hay que darle más importancia",
@@ -63,22 +56,8 @@ const quizzs = [{
         answer: "Cuando los compañeros se ríen, es una broma",
         value: 1,
       }]
-    }],
-    tutorQuizz: [{
-      question: "¿Qué diferencia hay entre una broma y un caso de acoso?",
-      answer: [{
-        answer: "Una broma es algo puntual y no hay que darle más importancia",
-        value: 3,
-      }, {
-        answer: "Si se repite, y cada vez es más pesado, deja de ser una broma",
-        value: 4,
-      },{
-        answer: "Cuando los compañeros se ríen, es una broma",
-        value: 1,
-      }]
-    }]
-  },{
-    studentQuizz: [{
+    },
+    {
       question: "Cuando descubres una conversación en RRSS en la que están acosando a un compañero... ¿qué piensas?",
       answer: [{
         answer: "Leo los comentarios y me río, pero no participo.",
@@ -91,21 +70,8 @@ const quizzs = [{
         value: 4,
       }]
     }],
-    tutorQuizz: [{
-      question: "Cuando descubres una conversación en RRSS en la que están acosando a un compañero... ¿qué piensas?",
-      answer: [{
-        answer: "Leo los comentarios y me río, pero no participo.",
-        value: 1,
-      }, {
-        answer: "Participo de la broma, es solo eso, una broma.",
-        value: 0,
-      },{
-        answer: "Me pongo en contacto con el hermano mayor de la víctima e informo al centro de lo ocurrido.",
-        value: 4,
-      }]
-    }]
-  }]
-}];
+  }];
+
 
 
 Quizz.create(quizzs, (err, quizzDocs) => {

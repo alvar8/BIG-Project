@@ -13,9 +13,9 @@
 <li><a [routerLink]="['/todo']">To Do</a></li>
 <li><a [routerLink]="['/points']">Puntos</a></li>
   </ul>
-</div>
 
-<div *ngIf="user.role=='Student' && user.refToBrother==''">
+<div *ngIf="user.role=='Student'&& !user.refToBrother">
 <button (click)="getabro(this.user._id)">Get a brother</button>
+</div>
 </div>
 </div>
