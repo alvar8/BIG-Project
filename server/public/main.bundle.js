@@ -1933,8 +1933,8 @@ module.exports = __webpack_require__.p + "img1.60c600fb1d011fc3b3ef.png";
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    production: false,
-    BASEURL: 'http://localhost:3000'
+    production: true,
+    BASEURL: ''
 };
 //# sourceMappingURL=environment.js.map
 
