@@ -65,6 +65,10 @@ app.use('/todo', todoRoutes);
 app.use('/quizz', quizzRoutes);
 app.use('/selfie', selfieRoutes);
 
+app.all('/*', function (req, res) {
+  res.sendfile(__dirname + './public/index.html');
+})
+
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

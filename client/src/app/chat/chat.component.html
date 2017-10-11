@@ -1,9 +1,11 @@
+<div class="img">
+  <h3>Chat</h3>
    <div *ngIf="message">
-      <div *ngFor=" let m of message">
-    {{m.message}}
+      <div *ngFor=" let m of message" class="chatbox">
+        <div>
+    <p class="text">{{m.message}}</p>
   </div>
 </div>
-
 
 
 <form >
@@ -15,7 +17,8 @@
     <button (click)="send(this.user._id,messagetosend,this.user.refToBrother,this.user.username)">Send</button>
 </div>
 <div *ngIf="user.role=='Tutor'">
-   <button (click)="bigBrotherSend(this.user._id,messagetosend,this.user.refToBrother,this.user.username)">Send</button>
+   <button (click)="bigBrotherSend(this.user._id,messagetosend,this.user.refToBrother,this.user.username)" class="glyphicon glyphicon-send" aria-hidden="true"></button>
 </div>
 
 </form>
+</div>
