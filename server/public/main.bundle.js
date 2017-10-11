@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-navbar></app-navbar>\n<div style=\"text-align:center\">\n\n  <div style=\"text-align:center\">\n  <ul>\n  <!-- <li><a [routerLink]=\"['/home']\">Home</a></li>\n  <li><a [routerLink]=\"['/user']\">User Profile</a></li>\n  <li><a [routerLink]=\"['/quizz']\">Quizz</a></li> -->\n  </ul>\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- <app-navbar></app-navbar> -->\n<div style=\"text-align:center\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -197,7 +197,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 30%;\n  padding-left: 10%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n\n.home li{\n  padding:2%;\n}\n", ""]);
 
 // exports
 
@@ -210,7 +210,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/brother/brother.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\n  <div *ngIf=\"user.role=='Student'\">\n  <li><a [routerLink]=\"['/chat',user._id]\">Chat</a></li>\n  <li><a [routerLink]=\"['/selfie',user._id]\">Selfie</a></li>\n</div>\n<div *ngIf=\"user.role=='Tutor'\">\n  <li><a [routerLink]=\"['/chat',user.refToBrother]\">Chat</a></li>\n  <li><a [routerLink]=\"['/selfie',user.refToBrother]\">Selfie</a></li>\n</div>\n</div>\n"
+module.exports = "<div class=\"img\">\n<div *ngIf=\"user\" class=\"home\">\n  <div *ngIf=\"user.role=='Student'\">\n  <li><a [routerLink]=\"['/chat',user._id]\">Chat</a></li>\n  <li><a [routerLink]=\"['/selfie',user._id]\">Selfie</a></li>\n</div>\n<div *ngIf=\"user.role=='Tutor'\" class=\"home\">\n  <li><a [routerLink]=\"['/chat',user.refToBrother]\">Chat</a></li>\n  <li><a [routerLink]=\"['/selfie',user.refToBrother]\">Selfie</a></li>\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -279,7 +279,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/chat/chat.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  chat works!\n</p>\n\n   <div *ngIf=\"message\">\n      <div *ngFor=\" let m of message\">\n    {{m.message}}\n  </div>\n</div>\n\n\n\n<form >\n  <textarea rows=\"4\" cols=\"50\" [(ngModel)]=\"messagetosend\" name=\"message\">\n\n</textarea>\n\n <div *ngIf=\"user.role=='Student'\">\n    <button (click)=\"send(this.user._id,messagetosend,this.user.refToBrother,this.user.username)\">Send</button>\n</div>\n<div *ngIf=\"user.role=='Tutor'\">\n   <button (click)=\"bigBrotherSend(this.user._id,messagetosend,this.user.refToBrother,this.user.username)\">Send</button>\n</div>\n\n</form>\n"
+module.exports = "   <div *ngIf=\"message\">\n      <div *ngFor=\" let m of message\">\n    {{m.message}}\n  </div>\n</div>\n\n\n\n<form >\n  <textarea rows=\"4\" cols=\"50\" [(ngModel)]=\"messagetosend\" name=\"message\">\n\n</textarea>\n\n <div *ngIf=\"user.role=='Student'\">\n    <button (click)=\"send(this.user._id,messagetosend,this.user.refToBrother,this.user.username)\">Send</button>\n</div>\n<div *ngIf=\"user.role=='Tutor'\">\n   <button (click)=\"bigBrotherSend(this.user._id,messagetosend,this.user.refToBrother,this.user.username)\">Send</button>\n</div>\n\n</form>\n"
 
 /***/ }),
 
@@ -470,7 +470,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 50%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n", ""]);
 
 // exports
 
@@ -483,7 +483,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"user\">\n  <ul>\n  <li><a [routerLink]=\"['/user']\">User Profile</a></li>\n  <li><a [routerLink]=\"['/brother']\">Brother</a></li>\n  <li><a [routerLink]=\"['/quizz']\">Quizz</a></li>\n  <li><a [routerLink]=\"['/mail']\">Buzón virtual</a></li>\n</ul>\n</div>\n"
+module.exports = "<div class=\"img\">\n<div *ngIf=\"user\">\n  <ul class=\"home\">\n  <li><a [routerLink]=\"['/user']\">Mi perfil</a></li>\n  <div *ngIf=\"user.role=='Tutor'\">\n  <li><a [routerLink]=\"['/brother']\">Hermano Menor</a></li>\n</div>\n<div *ngIf=\"user.role=='Student'\">\n<li><a [routerLink]=\"['/brother']\">Hermano Mayor</a></li>\n</div>\n  <li><a [routerLink]=\"['/quizz']\">Quizz</a></li>\n  <li><a [routerLink]=\"['/mail']\">Buzón virtual</a></li>\n</ul>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -539,7 +539,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  width: 120px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.text{\n  margin:10% 13% 10% 13%;\n  font-size: 36px;\n\tline-height: 1.11;\n}\n", ""]);
 
 // exports
 
@@ -552,7 +552,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/index/index.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Esto es BIG Project, una iniciativa para acabar con el acoso en las escuelas.¿Te apuntas?</h2>\n<a [routerLink]=\"['/login']\" class=\"btn btn-default\">Login</a>\n<a [routerLink]=\"['/signup']\" class=\"btn btn-default\">Sign up</a>\n"
+module.exports = "<div class=\"img\">\n<h2 class=\"text\">Esto es BIG Project, una iniciativa para acabar con el acoso en las escuelas.<br>¿Te apuntas?</h2>\n<div>\n<a [routerLink]=\"['/signup']\" class=\"btn btn-round\">Registrar usuario</a>\n</div>\n<a [routerLink]=\"['/login']\" class=\"btn btn-round\">Inicio sesión</a>\n</div>\n"
 
 /***/ }),
 
@@ -600,7 +600,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.login{\n  padding-top: 30%;\n}\ninput{\n  margin: 10% 0;\n  border: 0;\n  outline: 0;\n  background: transparent;\n  border-bottom: 1px solid black;\n  height:40px;\n}\ninput textarea { background: #FFF; }\n", ""]);
 
 // exports
 
@@ -613,7 +613,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/loginform/loginform.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form >\n  <h2> Login </h2>\n  <label> Username </label>\n  <input type=\"text\" [(ngModel)]=\"formInfo.username\" name=\"username\"/>\n  <br>\n  <label> Password </label>\n  <input type=\"password\" [(ngModel)]=\"formInfo.password\" name=\"password\"/>\n\n  <button (click)=\"login()\"> login </button>\n</form>\n"
+module.exports = "<div class=\"img\">\n  <div class=\"login\">\n<form>\n  <div class=\"form-row\">\n   <div class=\"col\">\n  <input type=\"text\" [(ngModel)]=\"formInfo.username\" name=\"username\" placeholder=\"Usuario\"/>\n  </div>\n  <div class=\"col\">\n  <input type=\"password\" [(ngModel)]=\"formInfo.password\" name=\"password\" placeholder=\"Contraseña\"/>\n</div>\n</div>\n  <button (click)=\"login()\" class=\"btn btn-default\"> OK </button>\n</form>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -685,7 +685,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\np{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 2% 10%;\n}\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 360px;\n\theight: 253px;\n\topacity: 0.19;\n\tbackground-color: #0074cd;\n  margin-top: 2%;\n  color:#000;\n}\n\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 18px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n", ""]);
 
 // exports
 
@@ -698,7 +698,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/mail/mail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<textarea rows=\"4\" cols=\"50\">\n</textarea>\n<button>Enviar</button>\n"
+module.exports = "<div class=\"img\">\n<h3>Buzón</h3>\n<p>¿Tienes algo que decir? Seguro que sí, todas las ideas y propuestas son bienvenidas.</p>\n\n<p>Escribe aquí tu sugerencia.</p>\n<textarea rows=\"4\" cols=\"50\">\n</textarea>\n<button class=\"btn\">Enviar</button>\n</div>\n"
 
 /***/ }),
 
@@ -807,7 +807,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n.introduction p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 10% 10% 0 10%;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n", ""]);
 
 // exports
 
@@ -820,7 +820,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/quizz/quizz.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  quizz works!\n</p>\n<div *ngIf=\"this.userRole=='Tutor'\">\n  <div *ngIf=\"this.counter=='0'\">\n    <p>Introducción</p>\n  </div>\n  <div *ngIf=\"this.counter >='1'&& this.counter<'4'\">\n    <div *ngIf=\"this.tutorQuizz\">\n      <h3>{{this.counter}}/3</h3>\n      <p>{{this.tutorQuizz[this.randomNumber][0].question }}</p>\n      <form>\n        <input type=\"radio\" name=\"answer\" value=\"{{this.tutorQuizz[this.randomNumber][0].answer[0].value}}\"> {{this.tutorQuizz[this.randomNumber][0].answer[0].answer}}\n        <br>\n        <input type=\"radio\" name=\"answer\" value=\"{{this.tutorQuizz[this.randomNumber][0].answer[0].value}}\"> {{this.tutorQuizz[this.randomNumber][0].answer[1].answer}}\n        <br>\n      </form>\n    </div>\n  </div>\n  <div *ngIf=\"this.counter=='4'\">\n    <p>Thanks for doing the quizz</p>\n  </div>\n  <button (click)=\"this.getRandomNumber()\">Next</button>\n</div>\n\n<div *ngIf=\"this.userRole=='Student'\">\n\n  <div *ngIf=\"this.studentQuizz\">\n    <h3>{{this.counter}}/3</h3>\n    <p>{{this.studentQuizz[this.randomNumber][0].question }}</p>\n    <p>{{this.studentQuizz[this.randomNumber][0].answer[0]}}</p>\n    <p>{{this.studentQuizz[this.randomNumber][0].answer[1]}}</p>\n    <button (click)=\"this.getRandomNumber()\">Next</button>\n  </div>\n</div>\n<p>{{this.userRole}}</p>\n"
+module.exports = "<div class=\"img\">\n<h3>Quizz</h3>\n<div *ngIf=\"user\">\n  <div *ngIf=\"this.counter=='0'\" class=\"introduction\">\n    <p>Hola {{this.user.username}}</p>\n    <p>Con tu ayuda, vamos a hacer algo grande, eliminar el acoso de las aulas. ¿Estás preparado para esta misión?</p>\n    <button (click)=\"this.getRandomNumber()\" class=\"btn\">Siguinte</button>\n  </div>\n  <div *ngIf=\"this.counter >='1'&& this.counter<'4'\">\n    <!-- {{ this.Quizz | json}} -->\n      <h3>{{this.counter}}/3</h3>\n      <p>{{this.Quizz[0].Quizz[1].question }}</p>\n  <div *ngIf=\"this.quizzcounter=='0'\">\n    <form>\n      <textarea [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}\"rows=\"4\" cols=\"50\">\n      </textarea>\n     <button (click)=\"this.getRandomNumber(); this.getPoints(this.user._id)\">Next</button>\n   </form>\n  </div>\n  <div *ngIf=\"this.quizzcounter>'0' && this.quizzcounter<3\">\n       <form>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}\"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[0].answer}}\n        <br>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[1].value}}\"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[1].answer}}\n        <br>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].value}}\"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[2].answer}}\n        <br>\n        <button (click)=\"this.getRandomNumber(); this.getPoints(this.user._id)\">Next</button>\n      </form>\n</div>\n  </div>\n  <div *ngIf=\"this.counter=='4'\">\n    <p>Thanks for doing the quizz</p>\n    <button (click)=\"this.goBack()\">Go Back</button>\n  </div>\n\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -832,6 +832,7 @@ module.exports = "<p>\n  quizz works!\n</p>\n<div *ngIf=\"this.userRole=='Tutor'
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_quizz_controller_service__ = __webpack_require__("../../../../../src/app/services/quizz-controller.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_is_logged_in_canactivate_service__ = __webpack_require__("../../../../../src/app/services/is-logged-in.canactivate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -844,17 +845,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var QuizzComponent = (function () {
-    function QuizzComponent(controller, log) {
+    function QuizzComponent(controller, log, router) {
         this.controller = controller;
         this.log = log;
+        this.router = router;
+        this.quizzcounter = -1;
         this.counter = 0;
+        this.formInfo = {
+            answer: ""
+        };
     }
     QuizzComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.controller.getStudentQuizz().subscribe(function (quizz) { return _this.studentQuizz = quizz; });
-        this.controller.getTutorQuizz().subscribe(function (quizz2) { return _this.tutorQuizz = quizz2; });
-        this.randomNumber = Math.round((Math.random() * 3));
+        this.controller.getQuizz().subscribe(function (quizz) { return _this.Quizz = quizz; });
         this.user = this.log.user;
         this.userRole = this.user.role;
     };
@@ -865,8 +870,27 @@ var QuizzComponent = (function () {
         else {
             this.counter = 0;
         }
-        this.randomNumber = Math.round((Math.random() * 3));
-        console.log(this.randomNumber);
+        if (this.quizzcounter < 3) {
+            console.log('entro a sumar');
+            this.quizzcounter++;
+            console.log(this.quizzcounter);
+        }
+        else {
+            this.quizzcounter = -1;
+        }
+    };
+    QuizzComponent.prototype.goBack = function () {
+        this.router.navigate(['/home']);
+    };
+    QuizzComponent.prototype.getPoints = function (user) {
+        var answer = this.formInfo;
+        if ((answer.answer).length > 1) {
+            answer.answer = "2";
+        }
+        var id = user;
+        this.controller.sendPoints(id, answer)
+            .map(function (res) { return console.log(res); })
+            .subscribe(function (r) { return console.log(r); });
     };
     return QuizzComponent;
 }());
@@ -876,10 +900,10 @@ QuizzComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/quizz/quizz.component.html"),
         styles: [__webpack_require__("../../../../../src/app/quizz/quizz.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_quizz_controller_service__["a" /* QuizzControllerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_quizz_controller_service__["a" /* QuizzControllerService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_is_logged_in_canactivate_service__["a" /* IsLoggedInService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_is_logged_in_canactivate_service__["a" /* IsLoggedInService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_quizz_controller_service__["a" /* QuizzControllerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_quizz_controller_service__["a" /* QuizzControllerService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_is_logged_in_canactivate_service__["a" /* IsLoggedInService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_is_logged_in_canactivate_service__["a" /* IsLoggedInService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object])
 ], QuizzComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=quizz.component.js.map
 
 /***/ }),
@@ -1377,13 +1401,8 @@ var QuizzControllerService = (function () {
         this.userLoginEvent.emit(user);
         return user;
     };
-    QuizzControllerService.prototype.getStudentQuizz = function () {
-        return this.http.get(BASEURL + "/student", this.options)
-            .map(function (res) { return res.json(); })
-            .catch(this.handleError);
-    };
-    QuizzControllerService.prototype.getTutorQuizz = function () {
-        return this.http.get(BASEURL + "/tutor", this.options)
+    QuizzControllerService.prototype.getQuizz = function () {
+        return this.http.get(BASEURL + "/", this.options)
             .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
@@ -1396,6 +1415,11 @@ var QuizzControllerService = (function () {
         return this.http.get(BASEURLAuth + "/loggedin", this.options)
             .map(function (res) { return res.json(); })
             .map(function (user) { return _this.emitUserLoginEvent(user); })
+            .catch(this.handleError);
+    };
+    QuizzControllerService.prototype.sendPoints = function (id, points) {
+        return this.http.post(BASEURL + "/points", { id: id, points: points }, this.options)
+            .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
     return QuizzControllerService;
@@ -1759,7 +1783,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n\n.bg-green{\n\twidth: 181px;\n\theight: 138px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 0 10px 0 rgba(110, 110, 123, 0.5);\n  margin-left:15%;\n}\n\n.bg-red{\n  width: 175px;\n\theight: 136px;\n\tborder-radius: 5px;\n\tbackground-color: #ff473d;\n\tbox-shadow: 0 0 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 40%;\n  padding-left: 3%;\n  margin-top: -3%;\n  margin-bottom: -3%;\n}\n\n.bg-blue{\n  width: 216px;\n\theight: 120px;\n\tborder-radius: 5px;\n\tbackground-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 25%;\n}\n\n.bg-green p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-red p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\ttext-align: left;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-blue p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.2;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.idea{\n  text-align: left;\n  font-size: 22px;\n  margin: 7% 0 10% 15%;\n}\n", ""]);
 
 // exports
 
@@ -1772,7 +1796,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/userprofile/todo/todo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  todo works!\n</p>\n<div *ngFor=\"let t of todos\">\n<p>{{t.todo[0]}}</p>\n<p>{{t.todo[1]}}</p>\n<p>{{t.todo[2]}}</p>\n</div>\n \n"
+module.exports = "<div class=\"img\">\n  <h3>To do</h3>\n  <p class=\"idea\">¡Aquí algunas ideas!</p>\n<div *ngFor=\"let t of todos\">\n  <div class=\"bg-green\">\n<p>{{t.todo[0]}}</p>\n</div>\n<div class=\"bg-red\">\n<p>{{t.todo[1]}}</p>\n</div>\n<div class=\"bg-blue\">\n<p>{{t.todo[2]}}</p>\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -1830,7 +1854,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.myprofileHeader {\n\tfont-family: Apercu;\n\tfont-size: 44px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  text-align: center;\n}\n\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 50%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\nh2{\n  margin:0;\n  padding-top: 2%;\n}\n", ""]);
 
 // exports
 
@@ -1843,7 +1867,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/userprofile/userprofile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"!user\">\n  <h2>NO USER LOGGED IN</h2>\n</div>\n\n<div *ngIf=\"user\">\n\n  <!-- <pre> {{ user | json }} </pre> -->\n  <ul>\n<li><a [routerLink]=\"['/profile']\">Mis datos</a></li>\n<li><a [routerLink]=\"['/mail']\">Reportar</a></li>\n<li><a [routerLink]=\"['/todo']\">To Do</a></li>\n<li><a [routerLink]=\"['/points']\">Puntos</a></li>\n  </ul>\n</div>\n\n<button (click)=\"getabro(this.user._id)\">Get a brother</button>\n"
+module.exports = "<div class=\"img\">\n<h2 class=\"myprofileHeader\">Mi Perfil</h2>\n<div *ngIf=\"!user\">\n  <h2>NO USER LOGGED IN</h2>\n</div>\n\n<div *ngIf=\"user\">\n\n  <!-- <pre> {{ user | json }} </pre> -->\n  <ul class=\"home\">\n<li><a [routerLink]=\"['/profile']\">Mis datos</a></li>\n<li><a [routerLink]=\"['/mail']\">Reportar</a></li>\n<li><a [routerLink]=\"['/todo']\">To Do</a></li>\n<li><a [routerLink]=\"['/points']\">Puntos</a></li>\n  </ul>\n\n<div *ngIf=\"user.role=='Student'&& !user.refToBrother\">\n<button (click)=\"getabro(this.user._id)\">Get a brother</button>\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -1896,19 +1920,21 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/assets/img1.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img1.60c600fb1d011fc3b3ef.png";
+
+/***/ }),
+
 /***/ "../../../../../src/environments/environment.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
-// The file contents for the current environment will overwrite these during build.
-// The build system defaults to the dev environment which uses `environment.ts`, but if you do
-// `ng build --env=prod` then `environment.prod.ts` will be used instead.
-// The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: true,
-    BASEURL: ''
+    production: false,
+    BASEURL: 'http://localhost:3000'
 };
 //# sourceMappingURL=environment.js.map
 
