@@ -2,6 +2,21 @@
   visibility: hidden;
 }
 .img{
-  width:30%;
-  height:320px;
+  width:50%;
+  height:200px;
+}
+.imgb{
+  background-image: url(../../assets/img1.png);
+  height: 100vh;
+  font-family: Apercu;
+}
+h3{
+  margin:0;
+  padding-top: 5%;
+  margin-bottom: 30%;
+}
+
+.pic{
+  width:100%;
+  background-color: #0074cd;
 }

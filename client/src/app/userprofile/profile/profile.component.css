@@ -1,0 +1,9 @@
+.img{
+  background-image: url(../../../assets/img1.png);
+  height: 100vh;
+  font-family: Apercu;
+}
+h3{
+  margin:0;
+  padding-top: 5%;
+}

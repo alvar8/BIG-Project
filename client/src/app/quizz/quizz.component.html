@@ -14,7 +14,7 @@
     <form>
       <textarea [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}"rows="4" cols="50">
       </textarea>
-     <button (click)="this.getRandomNumber(); this.getPoints(this.user._id)">Next</button>
+     <button (click)="this.getRandomNumber(); this.getPoints(this.user._id)" class="btn">Siguiente</button>
    </form>
   </div>
   <div *ngIf="this.quizzcounter>'0' && this.quizzcounter<3">
@@ -25,13 +25,13 @@
         <br>
         <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].value}}"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[2].answer}}
         <br>
-        <button (click)="this.getRandomNumber(); this.getPoints(this.user._id)">Next</button>
+        <button (click)="this.getRandomNumber(); this.getPoints(this.user._id)" class="btn">Siguiente</button>
       </form>
 </div>
   </div>
   <div *ngIf="this.counter=='4'">
-    <p>Thanks for doing the quizz</p>
-    <button (click)="this.goBack()">Go Back</button>
+    <p class="finish">¡Hemos terminado por hoy! Muchas gracias por paticipar en BIG Project. Acabas de conseguir 4 puntos extra que se añadirán a tu cuenta. Y recuerda, ante el abuso y acoso, TOLERANCIA CERO.</p>
+    <button (click)="this.goBack()" class="btn">Volver</button>
   </div>
 
 </div>

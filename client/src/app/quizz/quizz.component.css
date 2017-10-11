@@ -28,3 +28,11 @@ h3{
 	border-radius: 100px;
 	background-color: #000000;
 }
+.finish{
+  font-family: Apercu;
+	font-size: 22px;
+	line-height: 1.5;
+	text-align: justify;
+	color: #000000;
+  padding: 20% 10% 0 10%;
+}
