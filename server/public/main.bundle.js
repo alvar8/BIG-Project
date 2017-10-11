@@ -147,6 +147,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -176,6 +177,7 @@ AppModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_21_ng2_file_upload__["FileUploadModule"],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_8__angular_router__["c" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_14__routes__["a" /* routes */]),
             __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["a" /* AlertModule */].forRoot()
@@ -1019,6 +1021,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var BASEURL = __WEBPACK_IMPORTED_MODULE_6__environments_environment__["a" /* environment */].BASEURL + "/selfie";
+var BASEURLSelf = __WEBPACK_IMPORTED_MODULE_6__environments_environment__["a" /* environment */].BASEURL;
 var SelfieComponent = (function () {
     function SelfieComponent(auth, self, route, data) {
         this.auth = auth;
@@ -1032,7 +1035,7 @@ var SelfieComponent = (function () {
             refToOlderBrother: '',
             refToYoungerBrother: ''
         };
-        this.urlimg = BASEURL;
+        this.urlimg = BASEURLSelf;
         this.imageUrl = '';
     }
     SelfieComponent.prototype.ngOnInit = function () {
