@@ -47,13 +47,9 @@ export class QuizzComponent implements OnInit {
 
   getPoints(user){
     const answer = this.formInfo;
-    console.log("ANSWER", answer)
-    console.log("TIPO", typeof(answer.answer))
-    console.log("LONG", (answer.answer).length)
-    // if(typeof(answer) !== "number"){
-    //   this.formInfo = {answer : 2}
-    // }
-    console.log(answer)
+    if((answer.answer).length > 1){
+       answer.answer ="2"
+     }
     const id=user;
     this.controller.sendPoints(id,answer)
     .map(res => console.log(res))
