@@ -29,7 +29,7 @@ export class SelfieComponent implements OnInit {
   imageUrl:String;
   personEmotion;
   mainemotion;
-  urlimg='http://localhost:3000';
+  urlimg=BASEURL;
 
   constructor(public auth: AuthService, public self: SelfieService,private route: ActivatedRoute,
   private data: DataemotionService) {

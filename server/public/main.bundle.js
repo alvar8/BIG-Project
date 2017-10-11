@@ -1032,7 +1032,7 @@ var SelfieComponent = (function () {
             refToOlderBrother: '',
             refToYoungerBrother: ''
         };
-        this.urlimg = 'http://localhost:3000';
+        this.urlimg = BASEURL;
         this.imageUrl = '';
     }
     SelfieComponent.prototype.ngOnInit = function () {
