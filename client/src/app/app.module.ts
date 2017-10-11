@@ -20,7 +20,6 @@ import { SignupformComponent } from './signupform/signupform.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
-import { FileSelectDirective } from "ng2-file-upload";
 import { ChatComponent } from './chat/chat.component';
 import { SelfieComponent } from './selfie/selfie.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -43,7 +42,6 @@ import { FileUploadModule } from "ng2-file-upload";
     UserprofileComponent,
     QuizzComponent,
     EditprofileComponent,
-    FileSelectDirective,
     ChatComponent,
     SelfieComponent,
     NavbarComponent,

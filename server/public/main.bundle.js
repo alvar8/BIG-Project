@@ -99,24 +99,23 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__userprofile_userprofile_component__ = __webpack_require__("../../../../../src/app/userprofile/userprofile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__quizz_quizz_component__ = __webpack_require__("../../../../../src/app/quizz/quizz.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__editprofile_editprofile_component__ = __webpack_require__("../../../../../src/app/editprofile/editprofile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_ng2_file_upload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__chat_chat_component__ = __webpack_require__("../../../../../src/app/chat/chat.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__selfie_selfie_component__ = __webpack_require__("../../../../../src/app/selfie/selfie.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__navbar_navbar_component__ = __webpack_require__("../../../../../src/app/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__index_index_component__ = __webpack_require__("../../../../../src/app/index/index.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__brother_brother_component__ = __webpack_require__("../../../../../src/app/brother/brother.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__mail_mail_component__ = __webpack_require__("../../../../../src/app/mail/mail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__userprofile_profile_profile_component__ = __webpack_require__("../../../../../src/app/userprofile/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__userprofile_todo_todo_component__ = __webpack_require__("../../../../../src/app/userprofile/todo/todo.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__userprofile_points_points_component__ = __webpack_require__("../../../../../src/app/userprofile/points/points.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__chat_chat_component__ = __webpack_require__("../../../../../src/app/chat/chat.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__selfie_selfie_component__ = __webpack_require__("../../../../../src/app/selfie/selfie.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__navbar_navbar_component__ = __webpack_require__("../../../../../src/app/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__index_index_component__ = __webpack_require__("../../../../../src/app/index/index.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__brother_brother_component__ = __webpack_require__("../../../../../src/app/brother/brother.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__mail_mail_component__ = __webpack_require__("../../../../../src/app/mail/mail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__userprofile_profile_profile_component__ = __webpack_require__("../../../../../src/app/userprofile/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__userprofile_todo_todo_component__ = __webpack_require__("../../../../../src/app/userprofile/todo/todo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__userprofile_points_points_component__ = __webpack_require__("../../../../../src/app/userprofile/points/points.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_ng2_file_upload__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -163,21 +162,20 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_18__userprofile_userprofile_component__["a" /* UserprofileComponent */],
             __WEBPACK_IMPORTED_MODULE_19__quizz_quizz_component__["a" /* QuizzComponent */],
             __WEBPACK_IMPORTED_MODULE_20__editprofile_editprofile_component__["a" /* EditprofileComponent */],
-            __WEBPACK_IMPORTED_MODULE_21_ng2_file_upload__["FileSelectDirective"],
-            __WEBPACK_IMPORTED_MODULE_22__chat_chat_component__["a" /* ChatComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__selfie_selfie_component__["a" /* SelfieComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__navbar_navbar_component__["a" /* NavbarComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__index_index_component__["a" /* IndexComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__brother_brother_component__["a" /* BrotherComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__mail_mail_component__["a" /* MailComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__userprofile_profile_profile_component__["a" /* ProfileComponent */],
-            __WEBPACK_IMPORTED_MODULE_29__userprofile_todo_todo_component__["a" /* TodoComponent */],
-            __WEBPACK_IMPORTED_MODULE_30__userprofile_points_points_component__["a" /* PointsComponent */]
+            __WEBPACK_IMPORTED_MODULE_21__chat_chat_component__["a" /* ChatComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__selfie_selfie_component__["a" /* SelfieComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__navbar_navbar_component__["a" /* NavbarComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__index_index_component__["a" /* IndexComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__brother_brother_component__["a" /* BrotherComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__mail_mail_component__["a" /* MailComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__userprofile_profile_profile_component__["a" /* ProfileComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__userprofile_todo_todo_component__["a" /* TodoComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__userprofile_points_points_component__["a" /* PointsComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_21_ng2_file_upload__["FileUploadModule"],
+            __WEBPACK_IMPORTED_MODULE_30_ng2_file_upload__["FileUploadModule"],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_8__angular_router__["c" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_14__routes__["a" /* routes */]),
             __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["a" /* AlertModule */].forRoot()
