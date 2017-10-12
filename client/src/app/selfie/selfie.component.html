@@ -5,7 +5,7 @@
 <div *ngIf="selfie" class="pic">
 <img [src]="urlimg + selfie.selfie" class="img"/>
 </div>
-<button (click)="getPersonEmotion(urlimg + selfie.selfie)" class="glyphicon glyphicon-record"></button>
+<button (click)="getPersonEmotion('http://dreamicus.com/data/face/face-06.jpg')" class="glyphicon glyphicon-record"></button>
 <div *ngIf="personEmotion">
 <p>Main emotion: {{personEmotion.name}}</p>
 </div>

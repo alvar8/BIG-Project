@@ -1,4 +1,10 @@
-<div *ngIf="user">
+<div class="img">
   <button (click)="cancel()" class="glyphicon glyphicon-arrow-left"></button>
-<h3>Tus puntos: {{user.point}} </h3>
+  <h3>Puntos</h3>
+  <p>Te damos unos consejos para bla bla bla</p>
+<div *ngIf="user">
+<h3>Tus puntos:<br> {{user.point}} </h3>
+<h3> Puntos del colegio <br> 1476</h3>
+<h3> Ranking general <br> 17</h3>
+</div>
 </div>
