@@ -15,16 +15,16 @@ const userSchema = new mongoose.Schema({
     type:Number,
     default:0
   },
-  email:String,
   password: {
     type: String,
     required: [true, 'The password brand is required']
   },
+  alias:String,
+  email:String,
+  birthday:Date,
   refToBrother:{type:Schema.Types.ObjectId, ref:'User'},
-  picture: {
-    pic_path: String,
-    pic_name: String
-  }
+  picture: String,
+  pictureName:String
 }, {
   timestamps: {
     createdAt: "created_at",

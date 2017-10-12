@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { IsLoggedInService } from '../services/is-logged-in.canactivate.service';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-userprofile',
@@ -8,13 +10,26 @@ import { AuthService } from '../services/auth.service';
 })
 export class UserprofileComponent implements OnInit {
   user:object;
-  constructor(public auth:AuthService) {
+  currentuser;
+  userId;
+  pendingmessage=false;
+  constructor(public auth:AuthService, public log:IsLoggedInService, public message: MessageService) {
     this.user = this.auth.getUser();
     this.auth.getLoginEventEmitter()
         .subscribe( user => this.user=user );
   }
 
   ngOnInit() {
+    this.currentuser = this.log.user
+    this.userId = this.currentuser._id
+    this.message.getlastmessages(this.userId).subscribe( m =>
+    { if(m.refToWriter!==this.userId){
+      this.pendingmessage=true;
+    }else{
+        this.pendingmessage=false;
+      }
+    })
+
   }
 
   getabro(id){

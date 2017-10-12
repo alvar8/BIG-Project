@@ -72,4 +72,11 @@ export class AuthService {
         .catch(this.handleError);
     }
 
+    updateUser(id,username,password,alias,email,birthday,filename){
+      console.log(filename)
+      return this.http.post(`${BASEURL}/edit`,{id,username,password,alias,email,birthday,filename})
+      .map(res => res.json())
+      .catch(this.handleError);
+    }
+
 }

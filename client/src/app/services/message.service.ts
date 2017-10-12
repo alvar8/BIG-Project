@@ -50,4 +50,11 @@ export class MessageService {
       .catch(this.handleError);
   }
 
+  getlastmessages(id){
+    console.log("titi")
+    return this.http.get(`${BASEURL}/last/${id}`, this.options)
+    .map(res => res.json())
+    .catch(this.handleError);
+  }
+
 }

@@ -4,15 +4,22 @@
   <input type="text" [(ngModel)]="newUser.username" name="username"/>
   <br>
   <label> Password </label>
-  <input type="password" [(ngModel)]="newUser.password" name="password"/>
-
-  <label> Role </label>
-  <input type="radio" [(ngModel)]="newUser.role" name="role" value="Tutor"> Tutor<br>
-  <input type="radio" [(ngModel)]="newUser.role" name="role" value="Student"> Student<br>
-
+  <input type="password" [(ngModel)]="newUser.password" name="password">
+  <br>
+  <label> Alias </label>
+  <input type="text" [(ngModel)]="newUser.alias" name="alias"/>
+  <br>
+  <label> Email </label>
+  <input type="email" [(ngModel)]="newUser.email" name="email"/>
+  <br>
+  <label> Cumpleaños </label>
+  <input type="date" [(ngModel)]="newUser.date" name="date"/>
+  <br>
   <label>Picture</label>
 
-  <input type="file" name="single" ng2FileSelect [uploader]="uploader" />
+  <fieldset>
+     <input type="file" name="file"  id="file" ng2FileSelect [uploader]="uploader" />
+  </fieldset>
 
   <button (click)="submit()"> Edit </button>
 </form>

@@ -3,6 +3,9 @@
 <div *ngIf="!user">
   <h2>NO USER LOGGED IN</h2>
 </div>
+<div *ngIf="pendingmessage" class="pending">
+<p>Tienes un mensaje nuevo</p>
+</div>
 
 <div *ngIf="user">
 

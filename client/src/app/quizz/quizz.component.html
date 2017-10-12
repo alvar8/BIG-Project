@@ -1,6 +1,5 @@
 <div class="img">
 <h3>Quizz</h3>
-<div *ngIf="user">
   <div *ngIf="this.counter=='0'" class="introduction">
     <p>Hola {{this.user.username}}</p>
     <p>Con tu ayuda, vamos a hacer algo grande, eliminar el acoso de las aulas. ¿Estás preparado para esta misión?</p>
@@ -34,5 +33,5 @@
     <button (click)="this.goBack()" class="btn">Volver</button>
   </div>
 
-</div>
+
 </div>

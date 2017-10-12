@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizzControllerService } from '../services/quizz-controller.service';
-import { IsLoggedInService } from '../services/is-logged-in.canactivate.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-quizz',
@@ -10,20 +10,19 @@ import { Router } from '@angular/router';
 })
 export class QuizzComponent implements OnInit {
   Quizz;
-  userRole;
   user;
   quizzcounter: number= -1;
   counter: any = 0;
   formInfo = {
     answer: ""
   }
-  constructor(public controller: QuizzControllerService, public log: IsLoggedInService,
+  constructor(public auth: AuthService,public controller: QuizzControllerService,
   private router: Router) { }
 
   ngOnInit() {
+    this.user = this.auth.getUser();
     this.controller.getQuizz().subscribe(quizz => this.Quizz = quizz);
-    this.user = this.log.user
-    this.userRole = this.user.role
+
   }
 
   getRandomNumber() {

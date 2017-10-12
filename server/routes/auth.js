@@ -75,10 +75,9 @@ authRoutes.get('/loggedin', (req, res, next) => {
   res.status(403).json({ message: 'Unauthorized' });
 });
 
-authRoutes.post ('/edit', upload.single('filename'),(req,res,next) =>{
-  console.log("entro en backend")
-  const {username, password, role, picture} = req.body;
-    // const userId = req.params.id;
+authRoutes.post ('/edit', upload.single('file'),(req,res,next) =>{
+  console.log("entro en backedit")
+  const {id, username, password, alias, email,birthday} = req.body;
 
   const salt     = bcrypt.genSaltSync(10);
   const hashPass = bcrypt.hashSync(password, salt);
@@ -86,16 +85,17 @@ authRoutes.post ('/edit', upload.single('filename'),(req,res,next) =>{
   const updates = new User({
     username,
     password: hashPass,
-    role,
+    alias,
+    email,
+    birthday,
     picture: `/uploads/${req.file.filename}`,
+    pictureName:req.file.originalname
   });
   console.log(updates)
 
-  User.findOneAndUpdate({username:username}, updates,(err, user) => {
-    if (err)
-      return res.status(500).json({ message: 'Something went wrong' });
-      res.status(200).json(req.user);
-  });
+  User.findOneAndUpdate({_id:id}, updates, {new:true})
+    .then(s => res.status(200).json(s))
+    .catch(e => next(e))
 })
 
 
@@ -118,26 +118,6 @@ authRoutes.post ('/bro',(req,res,next) =>{
 )
 })
 
-
-// authRoutes.post('/messages',(req,res,next)=>{
-//   const {id} = req.body;
-//   const {message}=req.body;
-//   console.log(id)
-//   console.log(message)
-//   User.findByIdAndUpdate({_id:id}, {$push: {message: message}}, {new:true},(err, user) => {
-//     if (err)
-//       return res.status(500).json({ message: 'Something went wrong' });
-//       res.status(200).json(req.user);
-//   })
-//
-//   User.findOneAndUpdate({refToBrother:id}, {$push: {message: message}}, {new:true},(err, user) => {
-//     if (err)
-//       return res.status(500).json({ message: 'Something went wrong' });
-//       res.status(200).json(req.user);
-//   })
-//
-// })
-
 authRoutes.post('/messages',(req,res,next)=>{
   const {id,message,ref,name} = req.body;
     console.log(id)
@@ -147,6 +127,7 @@ authRoutes.post('/messages',(req,res,next)=>{
       refToYoungerBrother:id,
       message:name + ": " + message,
       refToOlderBrother:ref,
+      refToWriter:id,
     }).save()
     .then(p => res.status(200).json(p))
     .catch(e => next(e))
@@ -161,6 +142,7 @@ authRoutes.post('/messages',(req,res,next)=>{
         refToOlderBrother:id,
         message:name + ": " + message,
         refToYoungerBrother:ref,
+        refToWriter:id,
       }).save()
       .then(p => res.status(200).json(p))
       .catch(e => next(e))
@@ -174,5 +156,11 @@ authRoutes.post('/messages',(req,res,next)=>{
   }).catch( e => res.status(500).json({error:e.message}));
   })
 
+  authRoutes.get('/last/:id',(req, res, next)=>{
+    console.log("tototo")
+    const {id}= req.params;
+    Message.findOne({ $or:[{refToYoungerBrother:id},{refToOlderBrother:id}]}, {}, { sort: { 'created_at' : -1 } })
+    .then(result => res.status(200).json(result))
+  })
 
 module.exports = authRoutes;
