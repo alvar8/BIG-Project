@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../services/auth.service';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 interface LoginForm{
   username:string;
@@ -18,7 +19,7 @@ export class LoginformComponent implements OnInit {
     password: ""
   };
 
-  constructor(public auth:AuthService, private router: Router) { }
+  constructor(private location: Location, public auth:AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -35,4 +36,7 @@ export class LoginformComponent implements OnInit {
     }
   }
 
+  cancel() {
+    this.location.back(); // <-- go back to previous location on cancel
+  }
 }

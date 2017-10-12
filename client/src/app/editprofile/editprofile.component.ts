@@ -5,7 +5,7 @@ import { FileUploader} from "ng2-file-upload";
 import { ActivatedRoute } from '@angular/router';
 import {environment} from '../../environments/environment';
 
-const BASEURL:string = environment.BASEURL + "/auth";
+const BASEURL:string = environment.BASEURL + "/auth/edit";
 @Component({
   selector: 'app-editprofile',
   templateUrl: './editprofile.component.html',
@@ -15,8 +15,9 @@ export class EditprofileComponent implements OnInit {
   public uploader:FileUploader = new FileUploader({
     url: BASEURL
   });
-
+  userId:String;
   newUser = {
+    id: '',
     username: '',
     password: '',
     alias:'',
@@ -24,7 +25,7 @@ export class EditprofileComponent implements OnInit {
     birthday:''
   };
   feedback: string;
-  userId:String;
+
   constructor(public auth:AuthService, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -34,6 +35,7 @@ export class EditprofileComponent implements OnInit {
   submit() {
 
   this.uploader.onBuildItemForm = (item, form) => {
+    form.append('id', this.userId)
     form.append('name', this.newUser.username);
     form.append('password', this.newUser.password);
     form.append('alias', this.newUser.alias);
@@ -43,10 +45,7 @@ export class EditprofileComponent implements OnInit {
   };
   console.log("hago subida de archivos")
   this.uploader.uploadAll();
-  this.uploader.onCompleteItem=  (res) => this.auth.updateUser(this.userId,this.newUser.username,this.newUser.password,
-    this.newUser.alias,this.newUser.email,this.newUser.birthday,res.file.name)
-  .map(r => console.log(r))
-  .subscribe()
+  this.uploader.onCompleteItem=  (res) => console.log(res)
   }
 
 }

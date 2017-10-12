@@ -77,6 +77,7 @@ authRoutes.get('/loggedin', (req, res, next) => {
 
 authRoutes.post ('/edit', upload.single('file'),(req,res,next) =>{
   console.log("entro en backedit")
+  console.log(req.file)
   const {id, username, password, alias, email,birthday} = req.body;
 
   const salt     = bcrypt.genSaltSync(10);
