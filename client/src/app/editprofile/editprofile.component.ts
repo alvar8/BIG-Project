@@ -15,7 +15,7 @@ export class EditprofileComponent implements OnInit {
   public uploader:FileUploader = new FileUploader({
     url: BASEURL
   });
-  userId:String;
+  userId:string;
   newUser = {
     id: '',
     username: '',
@@ -33,9 +33,8 @@ export class EditprofileComponent implements OnInit {
       .subscribe((params) => this.userId = String(params['id']));
   }
   submit() {
-
+    this.newUser.id=this.userId
   this.uploader.onBuildItemForm = (item, form) => {
-    form.append('id', this.userId)
     form.append('name', this.newUser.username);
     form.append('password', this.newUser.password);
     form.append('alias', this.newUser.alias);

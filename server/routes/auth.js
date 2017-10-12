@@ -76,8 +76,6 @@ authRoutes.get('/loggedin', (req, res, next) => {
 });
 
 authRoutes.post ('/edit', upload.single('file'),(req,res,next) =>{
-  console.log("entro en backedit")
-  console.log(req.file)
   const {id, username, password, alias, email,birthday} = req.body;
 
   const salt     = bcrypt.genSaltSync(10);
@@ -92,7 +90,6 @@ authRoutes.post ('/edit', upload.single('file'),(req,res,next) =>{
     picture: `/uploads/${req.file.filename}`,
     pictureName:req.file.originalname
   });
-  console.log(updates)
 
   User.findOneAndUpdate({_id:id}, updates, {new:true})
     .then(s => res.status(200).json(s))

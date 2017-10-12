@@ -47,17 +47,15 @@ export class SelfieComponent implements OnInit {
 
   }
   submit(ref,id) {
-    console.log(this.newSelfie)
-    this.uploader.onBuildItemForm = (item, form) => {
+    this.newSelfie.refToOlderBrother=ref
+    this.newSelfie.refToYoungerBrother=id
+      this.uploader.onBuildItemForm = (item, form) => {
       form.append('refToOlderBrother', this.newSelfie.refToOlderBrother);
       form.append('refToYoungerBrother', this.newSelfie.refToYoungerBrother);
     };
     console.log("hago subida de archivos")
     this.uploader.uploadAll()
-    this.uploader.onCompleteItem = (res) => this.self.updateSelfie(ref,id,res.file.name)
-    .map(r => console.log(r))
-    .subscribe()
-
+    this.uploader.onCompleteItem=  () => console.log("hecho")
   }
 
   getPersonEmotion(imageUrl:String){

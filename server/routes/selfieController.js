@@ -10,11 +10,10 @@ const selfieRoutes = express.Router();
 
 selfieRoutes.post('/', upload.single('file'),(req,res,next) => {
   console.log("entro en backselfie")
-  const{ref,id}=req.body
-  console.log(id)
+  console.log(req.body)
   const newselfie = new Selfie({
-    refToOlderBrother:ref,
-    refToYoungerBrother:id,
+    refToOlderBrother:req.body.refToOlderBrother,
+    refToYoungerBrother:req.body.refToYoungerBrother,
     selfie: `/uploads/${req.file.filename}`,
     name:req.file.originalname
   });
