@@ -1,5 +1,6 @@
 #!/bin/bash
 cd client
+rm -rf ./dist
 echo 'Building client...'
 ng build -e prod
 cd ..

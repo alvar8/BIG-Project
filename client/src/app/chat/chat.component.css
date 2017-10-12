@@ -1,5 +1,6 @@
 .img{
-  background-image: url(../../assets/img1.png);
+  background-image: url(../../assets/chat.png);
+  background-size: cover;
   height: 100vh;
   font-family: Apercu;
 }
