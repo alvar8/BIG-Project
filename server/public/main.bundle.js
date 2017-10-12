@@ -450,8 +450,8 @@ var EditprofileComponent = (function () {
     };
     EditprofileComponent.prototype.submit = function () {
         var _this = this;
+        this.newUser.id = this.userId;
         this.uploader.onBuildItemForm = function (item, form) {
-            form.append('id', _this.userId);
             form.append('name', _this.newUser.username);
             form.append('password', _this.newUser.password);
             form.append('alias', _this.newUser.alias);
@@ -1090,16 +1090,15 @@ var SelfieComponent = (function () {
     };
     SelfieComponent.prototype.submit = function (ref, id) {
         var _this = this;
-        console.log(this.newSelfie);
+        this.newSelfie.refToOlderBrother = ref;
+        this.newSelfie.refToYoungerBrother = id;
         this.uploader.onBuildItemForm = function (item, form) {
             form.append('refToOlderBrother', _this.newSelfie.refToOlderBrother);
             form.append('refToYoungerBrother', _this.newSelfie.refToYoungerBrother);
         };
         console.log("hago subida de archivos");
         this.uploader.uploadAll();
-        this.uploader.onCompleteItem = function (res) { return _this.self.updateSelfie(ref, id, res.file.name)
-            .map(function (r) { return console.log(r); })
-            .subscribe(); };
+        this.uploader.onCompleteItem = function () { return console.log("hecho"); };
     };
     SelfieComponent.prototype.getPersonEmotion = function (imageUrl) {
         var _this = this;
