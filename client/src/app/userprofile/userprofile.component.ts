@@ -31,6 +31,7 @@ export class UserprofileComponent implements OnInit {
       }
     })
 
+
   }
 
   getabro(id){

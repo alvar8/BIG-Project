@@ -43,3 +43,16 @@ h2{
   margin-left: -77%;
   margin-top: 1%;
 }
+
+.pending{
+  width: 250px;
+	height: 100px;
+	border-radius: 5px;
+	background-color: #02ad58;
+	box-shadow: 0 0 40px 0 rgba(110, 110, 123, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#FFF;
+  margin-left: 15%;
+}
