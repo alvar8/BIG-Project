@@ -29,3 +29,8 @@ input{
   height:40px;
 }
 input textarea { background: #FFF; }
+.glyphicon{
+  font-size: 28px;
+  margin-left: -77%;
+  margin-top: 1%;
+}

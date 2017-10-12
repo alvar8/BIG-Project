@@ -1,11 +1,11 @@
 <div class="imgb">
-  <button (click)="cancel()">Back</button>
+  <button (click)="cancel()" class="glyphicon glyphicon-arrow-left"></button>
   <h3>Cámara</h3>
 
 <div *ngIf="selfie" class="pic">
 <img [src]="urlimg + selfie.selfie" class="img"/>
 </div>
-<button (click)="getPersonEmotion(urlimg + selfie.selfie)">Get emotion</button>
+<button (click)="getPersonEmotion(urlimg + selfie.selfie)" class="glyphicon glyphicon-record"></button>
 <div *ngIf="personEmotion">
 <p>Main emotion: {{personEmotion.name}}</p>
 </div>

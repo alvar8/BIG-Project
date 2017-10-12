@@ -18,7 +18,7 @@ h3{
 
 .pic{
   width:100%;
-  background-color: #0074cd;
+  background-color: #B9EEFC;
 }
 .imgb{
   background-image: url(../../assets/selfie.png);
@@ -26,4 +26,14 @@ h3{
   height: 100vh;
   font-family: Apercu;
   background-size: cover;
+}
+.glyphicon-record{
+  font-size: 33px;
+  color: green;
+}
+
+.glyphicon-arrow-left{
+  font-size: 28px;
+  margin-left: -77%;
+  margin-top: 1%;
 }

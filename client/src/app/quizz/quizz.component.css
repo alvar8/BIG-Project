@@ -37,3 +37,9 @@ h3{
 	color: #000000;
   padding: 20% 10% 0 10%;
 }
+
+.glyphicon{
+  font-size: 28px;
+  margin-left: -77%;
+  margin-top: 1%;
+}
