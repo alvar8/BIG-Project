@@ -2,6 +2,7 @@
   background-image: url(../../assets/brother.png);
   height: 100vh;
   font-family: Apercu;
+  background-size: cover;
 }
 .home{
   list-style-type: none;
@@ -25,4 +26,9 @@
 
 .home li{
   padding:2%;
+}
+.glyphicon{
+  font-size: 28px;
+  margin-left: -77%;
+  margin-top: 1%;
 }

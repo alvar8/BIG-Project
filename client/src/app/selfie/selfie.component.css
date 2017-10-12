@@ -20,3 +20,10 @@ h3{
   width:100%;
   background-color: #0074cd;
 }
+.imgb{
+  background-image: url(../../assets/selfie.png);
+  background-size: cover;
+  height: 100vh;
+  font-family: Apercu;
+  background-size: cover;
+}

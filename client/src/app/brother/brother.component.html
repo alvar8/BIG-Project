@@ -1,5 +1,5 @@
 <div class="img">
-  <button (click)="cancel()">Back</button>
+  <button (click)="cancel()" class="glyphicon glyphicon-arrow-left"></button>
 <div *ngIf="user" class="home">
   <div *ngIf="user.role=='Student'">
   <li><a [routerLink]="['/chat',user._id]">Chat</a></li>

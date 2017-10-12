@@ -1,0 +1,6 @@
+.img{
+  background-image: url(../../../assets/points.png);
+  height: 100vh;
+  font-family: Apercu;
+  background-size: cover;
+}
