@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { IsLoggedInService } from '../services/is-logged-in.canactivate.service';
 import { MessageService } from '../services/message.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-userprofile',
@@ -13,7 +14,7 @@ export class UserprofileComponent implements OnInit {
   currentuser;
   userId;
   pendingmessage=false;
-  constructor(public auth:AuthService, public log:IsLoggedInService, public message: MessageService) {
+  constructor(private location: Location, public auth:AuthService, public log:IsLoggedInService, public message: MessageService) {
     this.user = this.auth.getUser();
     this.auth.getLoginEventEmitter()
         .subscribe( user => this.user=user );
@@ -36,5 +37,9 @@ export class UserprofileComponent implements OnInit {
     console.log(id)
     this.auth.getbro(id).map(user => console.log(user))
     .subscribe();
+  }
+
+  cancel() {
+    this.location.back(); // <-- go back to previous location on cancel
   }
 }

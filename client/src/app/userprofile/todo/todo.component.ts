@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-todo',
@@ -11,7 +12,7 @@ todos;
 randomNumber1;
 randomNumber2;
 randomNumber3;
-  constructor(public todoget: TodoService) { }
+  constructor(private location: Location, public todoget: TodoService) { }
 
   ngOnInit() {
     console.log("heyyyy")
@@ -20,5 +21,7 @@ randomNumber3;
     this.randomNumber2=Math.round((Math.random()*3))
     this.randomNumber3=Math.round((Math.random()*3))
   }
-
+  cancel() {
+    this.location.back(); // <-- go back to previous location on cancel
+  }
 }
