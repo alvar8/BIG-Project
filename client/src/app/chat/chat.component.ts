@@ -26,11 +26,17 @@ export class ChatComponent implements OnInit {
   ngOnInit() {
     this.route.params
        .subscribe((params) => this.userId = String(params['id']));
+
+       setInterval(()=>{
     this.messages.getmessages(this.userId)
        .subscribe(message => this.message=message);
+       },1000)
        this.currentUser=this.log.user
        this.userRole=this.currentUser.role
   }
+
+
+
 
   send(id,message,ref,name){
     console.log(name)
