@@ -197,7 +197,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/brother.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 30%;\n  padding-left: 10%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n\n.home li{\n  padding:2%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/brother.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 30%;\n  padding-left: 10%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n\n.home li{\n  padding:2%;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -210,7 +210,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/brother/brother.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n<div *ngIf=\"user\" class=\"home\">\n  <div *ngIf=\"user.role=='Student'\">\n  <li><a [routerLink]=\"['/chat',user._id]\">Chat</a></li>\n  <li><a [routerLink]=\"['/selfie',user._id]\">Selfie</a></li>\n</div>\n<div *ngIf=\"user.role=='Tutor'\" class=\"home\">\n  <li><a [routerLink]=\"['/chat',user.refToBrother]\">Chat</a></li>\n  <li><a [routerLink]=\"['/selfie',user.refToBrother]\">Selfie</a></li>\n</div>\n</div>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n<div *ngIf=\"user\" class=\"home\">\n  <div *ngIf=\"user.role=='Student'\">\n  <li><a [routerLink]=\"['/chat',user._id]\">Chat</a></li>\n  <li><a [routerLink]=\"['/selfie',user._id]\">Selfie</a></li>\n</div>\n<div *ngIf=\"user.role=='Tutor'\" class=\"home\">\n  <li><a [routerLink]=\"['/chat',user.refToBrother]\">Chat</a></li>\n  <li><a [routerLink]=\"['/selfie',user.refToBrother]\">Selfie</a></li>\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -272,7 +272,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/chat.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 302px;\n\theight: 60px;\n\tbackground-color: #ffffff;\n\tbox-shadow: 0 10px 40px 0 rgba(190, 190, 206, 0.5);\n\tfont-family: Apercu;\n\tfont-size: 20px;\n\tletter-spacing: -0.6px;\n\ttext-align: left;\n\tcolor: #c7c7d3;\n}\n\nform{\n  position:fixed;\n  top:500px;\n  left:40px;\n}\n\n.chatbox:nth-child(odd){\n  width: 180px;\n\theight: 60px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 10px 40px 0 rgba(190, 190, 206, 0.5);\n  margin-left: 5%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n}\n\n\n.chatbox:nth-child(even){\n  width: 180px;\n\theight: 60px;\n  border-radius: 5px;\n  background-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin: 5% 0 5% 40%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n}\n\n.glyphico{\n  position:relative;\n  left:55%;\n  top: -50px;\n  border: 1px solid #c7c7d3;\n\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/chat.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 302px;\n\theight: 60px;\n\tbackground-color: #ffffff;\n\tbox-shadow: 0 10px 40px 0 rgba(190, 190, 206, 0.5);\n\tfont-family: Apercu;\n\tfont-size: 20px;\n\tletter-spacing: -0.6px;\n\ttext-align: left;\n\tcolor: #c7c7d3;\n}\n\nform{\n  position:relative;\n  top:94%;\n  margin-top: 2%;\n}\n\n.chatbox:nth-child(odd){\n  width: 180px;\n\theight: 60px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 10px 40px 0 rgba(190, 190, 206, 0.5);\n  margin-left: 5%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n}\n\n\n.chatbox:nth-child(even){\n  width: 180px;\n\theight: 60px;\n  border-radius: 5px;\n  background-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin: 5% 0 5% 40%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n}\n\n.glyphicon-send{\n  position:relative;\n  left:45%;\n  top: -50px;\n  border: 1px solid #c7c7d3;\n}\n\n.glyphicon-arrow-left{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -285,7 +285,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/chat/chat.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n  <h3>Chat</h3>\n   <div *ngIf=\"message\">\n      <div *ngFor=\" let m of message\" class=\"chatbox\">\n        <div>\n    <p class=\"text\">{{m.message}}</p>\n  </div>\n</div>\n\n\n<form >\n  <textarea rows=\"4\" cols=\"50\" [(ngModel)]=\"messagetosend\" name=\"message\">\n\n</textarea>\n\n <div *ngIf=\"user.role=='Student'\">\n    <button (click)=\"send(this.user._id,messagetosend,this.user.refToBrother,this.user.username)\">Send</button>\n</div>\n<div *ngIf=\"user.role=='Tutor'\">\n   <button (click)=\"bigBrotherSend(this.user._id,messagetosend,this.user.refToBrother,this.user.username)\" class=\"glyphicon glyphicon-send\" aria-hidden=\"true\"></button>\n</div>\n\n</form>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>Chat</h3>\n   <div *ngIf=\"message\">\n      <div *ngFor=\" let m of message\" class=\"chatbox\">\n        <div>\n    <p class=\"text\">{{m.message}}</p>\n  </div>\n</div>\n\n\n<form >\n  <textarea rows=\"4\" cols=\"50\" [(ngModel)]=\"messagetosend\" name=\"message\">\n\n</textarea>\n\n <div *ngIf=\"user.role=='Student'\">\n    <button (click)=\"send(this.user._id,messagetosend,this.user.refToBrother,this.user.username)\">Send</button>\n</div>\n<div *ngIf=\"user.role=='Tutor'\">\n   <button (click)=\"bigBrotherSend(this.user._id,messagetosend,this.user.refToBrother,this.user.username)\" class=\"glyphicon glyphicon-send\" aria-hidden=\"true\"></button>\n</div>\n\n</form>\n</div>\n"
 
 /***/ }),
 
@@ -384,7 +384,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/profile.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n", ""]);
 
 // exports
 
@@ -486,7 +486,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 50%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/home.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 50%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -499,7 +499,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n<div *ngIf=\"user\">\n  <ul class=\"home\">\n  <li><a [routerLink]=\"['/user']\">Mi perfil</a></li>\n  <div *ngIf=\"user.role=='Tutor'\">\n  <li><a [routerLink]=\"['/brother']\">Hermano Menor</a></li>\n</div>\n<div *ngIf=\"user.role=='Student'\">\n<li><a [routerLink]=\"['/brother']\">Hermano Mayor</a></li>\n</div>\n  <li><a [routerLink]=\"['/quizz']\">Quizz</a></li>\n  <li><a [routerLink]=\"['/mail']\">Buzón virtual</a></li>\n</ul>\n</div>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n<div *ngIf=\"user\">\n  <ul class=\"home\">\n  <li><a [routerLink]=\"['/user']\">Mi perfil</a></li>\n  <div *ngIf=\"user.role=='Tutor'\">\n  <li><a [routerLink]=\"['/brother']\">Hermano Menor</a></li>\n</div>\n<div *ngIf=\"user.role=='Student'\">\n<li><a [routerLink]=\"['/brother']\">Hermano Mayor</a></li>\n</div>\n  <li><a [routerLink]=\"['/quizz']\">Quizz</a></li>\n  <li><a [routerLink]=\"['/mail']\">Buzón virtual</a></li>\n</ul>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -561,7 +561,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  width: 120px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.text{\n  margin:10% 13% 10% 13%;\n  font-size: 36px;\n\tline-height: 1.11;\n}\n", ""]);
+exports.push([module.i, "\n.img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/index.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  width: 120px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.text{\n  margin:10% 13% 10% 13%;\n  font-size: 36px;\n\tline-height: 1.11;\n  margin-top: 0;\n  padding-top: 27%;\n}\n", ""]);
 
 // exports
 
@@ -622,7 +622,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.login{\n  padding-top: 30%;\n}\ninput{\n  margin: 10% 0;\n  border: 0;\n  outline: 0;\n  background: transparent;\n  border-bottom: 1px solid black;\n  height:40px;\n}\ninput textarea { background: #FFF; }\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/login.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.login{\n  padding-top: 30%;\n}\ninput{\n  margin: 10% 0;\n  border: 0;\n  outline: 0;\n  background: transparent;\n  border-bottom: 1px solid black;\n  height:40px;\n\n}\n\ninput:-webkit-autofill {\n    -webkit-box-shadow: 0 0 0 30px white inset;\n}\ninput textarea { background: #FFF; }\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -635,7 +635,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/loginform/loginform.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n  <div class=\"login\">\n<form>\n  <div class=\"form-row\">\n   <div class=\"col\">\n  <input type=\"text\" [(ngModel)]=\"formInfo.username\" name=\"username\" placeholder=\"Usuario\"/>\n  </div>\n  <div class=\"col\">\n  <input type=\"password\" [(ngModel)]=\"formInfo.password\" name=\"password\" placeholder=\"Contraseña\"/>\n</div>\n</div>\n  <button (click)=\"login()\" class=\"btn btn-default\"> OK </button>\n</form>\n</div>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <div class=\"login\">\n<form>\n  <div class=\"form-row\">\n   <div class=\"col\">\n  <input type=\"text\" [(ngModel)]=\"formInfo.username\" name=\"username\" placeholder=\"Usuario\"/>\n  </div>\n  <div class=\"col\">\n  <input type=\"password\" [(ngModel)]=\"formInfo.password\" name=\"password\" placeholder=\"Contraseña\"/>\n</div>\n</div>\n  <button (click)=\"login()\" class=\"btn btn-default\"> OK </button>\n</form>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -713,7 +713,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\np{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 2% 10%;\n}\n\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 360px;\n\theight: 253px;\n\topacity: 0.19;\n\tbackground-color: #0074cd;\n  margin-top: 2%;\n  color:#000;\n}\n\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 18px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/mail.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\np{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 2% 10%;\n}\n\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 360px;\n\theight: 253px;\n\topacity: 0.19;\n\tbackground-color: #0074cd;\n  margin-top: 2%;\n  color:#000;\n}\n\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 18px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -726,7 +726,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/mail/mail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n<h3>Buzón</h3>\n<p>¿Tienes algo que decir? Seguro que sí, todas las ideas y propuestas son bienvenidas.</p>\n\n<p>Escribe aquí tu sugerencia.</p>\n<textarea rows=\"4\" cols=\"50\">\n</textarea>\n<button class=\"btn\">Enviar</button>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n<h3>Buzón</h3>\n<p>¿Tienes algo que decir? Seguro que sí, todas las ideas y propuestas son bienvenidas.</p>\n\n<p>Escribe aquí tu sugerencia.</p>\n<textarea rows=\"4\" cols=\"50\">\n</textarea>\n<button class=\"btn\">Enviar</button>\n</div>\n"
 
 /***/ }),
 
@@ -842,7 +842,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n.introduction p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 10% 10% 0 10%;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.finish{\n  font-family: Apercu;\n\tfont-size: 22px;\n\tline-height: 1.5;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 20% 10% 0 10%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/quizz.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n.introduction p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 10% 10% 0 10%;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.finish{\n  font-family: Apercu;\n\tfont-size: 22px;\n\tline-height: 1.5;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 20% 10% 0 10%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n\ntextarea{\n  background-color: #D9F6FE;\n  height:220px;\n  margin-bottom: 20%;\n}\n\n.three{\n  color:green;\n}\np{\n  font-size: 22px;\n  padding-top: 2%;\n  margin-bottom: 10%;\n}\nspan{\n  font-size: 20px;\n  padding: 5%;\n}\n\n.send{\n  margin-top: 20%;\n}\n", ""]);
 
 // exports
 
@@ -855,7 +855,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/quizz/quizz.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n<h3>Quizz</h3>\n  <div *ngIf=\"this.counter=='0'\" class=\"introduction\">\n    <p>Hola {{this.user.username}}</p>\n    <p>Con tu ayuda, vamos a hacer algo grande, eliminar el acoso de las aulas. ¿Estás preparado para esta misión?</p>\n    <button (click)=\"this.getRandomNumber()\" class=\"btn\">Siguinte</button>\n  </div>\n  <div *ngIf=\"this.counter >='1'&& this.counter<'4'\">\n    <!-- {{ this.Quizz | json}} -->\n      <h3>{{this.counter}}/3</h3>\n      <p>{{this.Quizz[0].Quizz[1].question }}</p>\n  <div *ngIf=\"this.quizzcounter=='0'\">\n    <form>\n      <textarea [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}\"rows=\"4\" cols=\"50\">\n      </textarea>\n     <button (click)=\"this.getRandomNumber(); this.getPoints(this.user._id)\" class=\"btn\">Siguiente</button>\n   </form>\n  </div>\n  <div *ngIf=\"this.quizzcounter>'0' && this.quizzcounter<3\">\n       <form>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}\"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[0].answer}}\n        <br>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[1].value}}\"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[1].answer}}\n        <br>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].value}}\"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[2].answer}}\n        <br>\n        <button (click)=\"this.getRandomNumber(); this.getPoints(this.user._id)\" class=\"btn\">Siguiente</button>\n      </form>\n</div>\n  </div>\n  <div *ngIf=\"this.counter=='4'\">\n    <p class=\"finish\">¡Hemos terminado por hoy! Muchas gracias por paticipar en BIG Project. Acabas de conseguir 4 puntos extra que se añadirán a tu cuenta. Y recuerda, ante el abuso y acoso, TOLERANCIA CERO.</p>\n    <button (click)=\"this.goBack()\" class=\"btn\">Volver</button>\n  </div>\n\n\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n<h3>Quizz</h3>\n  <div *ngIf=\"this.counter=='0'\" class=\"introduction\">\n    <p>Hola {{this.user.username}}</p>\n    <p>Con tu ayuda, vamos a hacer algo grande, eliminar el acoso de las aulas. ¿Estás preparado para esta misión?</p>\n    <button (click)=\"this.getRandomNumber()\" class=\"btn\">Siguiente</button>\n  </div>\n  <div *ngIf=\"this.counter >='1'&& this.counter<'4'\">\n    <!-- {{ this.Quizz | json}} -->\n      <h3 class=\"three\">{{this.counter}}/3</h3>\n      <p>{{this.Quizz[0].Quizz[1].question }}</p>\n  <div *ngIf=\"this.quizzcounter=='0'\">\n    <form>\n      <textarea [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}\"rows=\"4\" cols=\"50\">\n      </textarea>\n     <button (click)=\"this.getRandomNumber(); this.getPoints(this.user._id)\" class=\"btn\">Siguiente</button>\n   </form>\n  </div>\n  <div *ngIf=\"this.quizzcounter>'0' && this.quizzcounter<3\">\n       <form>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}\"> <span>{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].answer}}</span>\n        <br>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[1].value}}\"> <span>{{this.Quizz[0].Quizz[this.quizzcounter].answer[1].answer}}</span>\n        <br>\n        <input type=\"radio\" [(ngModel)]=\"formInfo.answer\" name=\"answer\" value=\"{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].value}}\"> <span>{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].answer}}</span>\n        <br>\n        <button (click)=\"this.getRandomNumber(); this.getPoints(this.user._id)\" class=\"btn send\">Siguiente</button>\n      </form>\n</div>\n  </div>\n  <div *ngIf=\"this.counter=='4'\">\n    <p class=\"finish\">¡Hemos terminado por hoy! Muchas gracias por paticipar en BIG Project. Acabas de conseguir 4 puntos extra que se añadirán a tu cuenta. Y recuerda, ante el abuso y acoso, TOLERANCIA CERO.</p>\n    <button (click)=\"this.goBack()\" class=\"btn\">Volver</button>\n  </div>\n\n\n</div>\n"
 
 /***/ }),
 
@@ -1012,7 +1012,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".hidden{\n  visibility: hidden;\n}\n.img{\n  width:50%;\n  height:200px;\n}\n.imgb{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n  margin-bottom: 30%;\n}\n\n.pic{\n  width:100%;\n  background-color: #0074cd;\n}\n", ""]);
+exports.push([module.i, ".hidden{\n  visibility: hidden;\n}\n.img{\n  width:50%;\n  height:200px;\n}\n.imgb{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n  margin-bottom: 30%;\n}\n\n.pic{\n  width:100%;\n  background-color: #B9EEFC;\n}\n.imgb{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/selfie.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.glyphicon-record{\n  font-size: 33px;\n  color: green;\n}\n\n.glyphicon-arrow-left{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -1025,7 +1025,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/selfie/selfie.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"imgb\">\n  <button (click)=\"cancel()\">Back</button>\n  <h3>Cámara</h3>\n\n<div *ngIf=\"selfie\" class=\"pic\">\n<img [src]=\"urlimg + selfie.selfie\" class=\"img\"/>\n</div>\n<button (click)=\"getPersonEmotion(urlimg + selfie.selfie)\">Get emotion</button>\n<div *ngIf=\"personEmotion\">\n<p>Main emotion: {{personEmotion.name}}</p>\n</div>\n\n<form>\n  <fieldset>\n     <input type=\"file\" name=\"file\"  id=\"file\" ng2FileSelect [uploader]=\"uploader\" />\n  </fieldset>\n  <button (click)=\"submit(this.user.refToBrother,this.user._id)\"> submit </button>\n</form>\n</div>\n"
+module.exports = "<div class=\"imgb\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>Cámara</h3>\n\n<div *ngIf=\"selfie\" class=\"pic\">\n<img [src]=\"urlimg + selfie.selfie\" class=\"img\"/>\n</div>\n<button (click)=\"getPersonEmotion('http://dreamicus.com/data/face/face-06.jpg')\" class=\"glyphicon glyphicon-record\"></button>\n<div *ngIf=\"personEmotion\">\n<p>Main emotion: {{personEmotion.name}}</p>\n</div>\n\n<form>\n  <fieldset>\n     <input type=\"file\" name=\"file\"  id=\"file\" ng2FileSelect [uploader]=\"uploader\" />\n  </fieldset>\n  <button (click)=\"submit(this.user.refToBrother,this.user._id)\"> submit </button>\n</form>\n</div>\n"
 
 /***/ }),
 
@@ -1366,7 +1366,6 @@ var MessageService = (function () {
         this.http = http;
         this.userLoginEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.options = { withCredentials: true };
-        //this.isLoggedIn().subscribe();
     }
     MessageService.prototype.getLoginEventEmitter = function () {
         return this.userLoginEvent;
@@ -1696,7 +1695,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/points.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\nh3{\n  margin-top: 0;\n}\n", ""]);
 
 // exports
 
@@ -1709,7 +1708,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/userprofile/points/points.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\n  <button (click)=\"cancel()\">Back</button>\n<h3>Tus puntos: {{user.point}} </h3>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>Puntos</h3>\n  <p>Te damos unos consejos para bla bla bla</p>\n<div *ngIf=\"user\">\n<h3>Tus puntos:<br> {{user.point}} </h3>\n<h3> Puntos del colegio <br> 1476</h3>\n<h3> Ranking general <br> 17</h3>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -1771,7 +1770,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/datos.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -1784,7 +1783,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/userprofile/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n  <h3>Mis datos</h3>\n<div *ngIf=\"user\">\n\n  <!-- <pre> {{ user | json }} </pre> -->\n\n  <p> Hello {{user.username}}</p>\n\n  <a [routerLink]=\"['/edit',user._id]\">Edit profile</a>\n\n  <button (click)=\"logout()\"> logout </button>\n</div>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>Mis datos</h3>\n<div *ngIf=\"user\">\n\n  <!-- <pre> {{ user | json }} </pre> -->\n\n  <p> Hello {{user.username}}</p>\n\n  <a [routerLink]=\"['/edit',user._id]\">Edit profile</a>\n\n  <button (click)=\"logout()\"> logout </button>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -1853,7 +1852,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n\n.bg-green{\n\twidth: 181px;\n\theight: 138px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 0 10px 0 rgba(110, 110, 123, 0.5);\n  margin-left:15%;\n}\n\n.bg-red{\n  width: 175px;\n\theight: 136px;\n\tborder-radius: 5px;\n\tbackground-color: #ff473d;\n\tbox-shadow: 0 0 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 40%;\n  padding-left: 3%;\n  margin-top: -3%;\n  margin-bottom: -3%;\n}\n\n.bg-blue{\n  width: 216px;\n\theight: 120px;\n\tborder-radius: 5px;\n\tbackground-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 25%;\n}\n\n.bg-green p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-red p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\ttext-align: left;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-blue p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.2;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.idea{\n  text-align: left;\n  font-size: 22px;\n  margin: 7% 0 10% 15%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/todo.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n\n.bg-green{\n\twidth: 181px;\n\theight: 138px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 0 10px 0 rgba(110, 110, 123, 0.5);\n  margin-left:15%;\n}\n\n.bg-red{\n  width: 175px;\n\theight: 136px;\n\tborder-radius: 5px;\n\tbackground-color: #ff473d;\n\tbox-shadow: 0 0 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 40%;\n  padding-left: 3%;\n  margin-top: -3%;\n  margin-bottom: -3%;\n}\n\n.bg-blue{\n  width: 216px;\n\theight: 120px;\n\tborder-radius: 5px;\n\tbackground-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 25%;\n}\n\n.bg-green p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-red p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\ttext-align: left;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-blue p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.2;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.idea{\n  text-align: left;\n  font-size: 22px;\n  margin: 7% 0 10% 15%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -1866,7 +1865,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/userprofile/todo/todo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n  <h3>To do</h3>\n  <p class=\"idea\">¡Aquí algunas ideas!</p>\n<div *ngFor=\"let t of todos\">\n  <div class=\"bg-green\">\n<p>{{t.todo[0]}}</p>\n</div>\n<div class=\"bg-red\">\n<p>{{t.todo[1]}}</p>\n</div>\n<div class=\"bg-blue\">\n<p>{{t.todo[2]}}</p>\n</div>\n</div>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>To do</h3>\n  <p class=\"idea\">¡Aquí algunas ideas!</p>\n<div *ngFor=\"let t of todos\">\n  <div class=\"bg-green\">\n<p>{{t.todo[0]}}</p>\n</div>\n<div class=\"bg-red\">\n<p>{{t.todo[1]}}</p>\n</div>\n<div class=\"bg-blue\">\n<p>{{t.todo[2]}}</p>\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -1930,7 +1929,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\n.myprofileHeader {\n\tfont-family: Apercu;\n\tfont-size: 44px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  text-align: center;\n}\n\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 50%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\nh2{\n  margin:0;\n  padding-top: 2%;\n}\n", ""]);
+exports.push([module.i, "\n.img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/profile.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.myprofileHeader {\n\tfont-family: Apercu;\n\tfont-size: 44px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  text-align: center;\n}\n\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Lato;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 40%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\nh2{\n  margin:0;\n  padding-top: 2%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -1943,7 +1942,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/userprofile/userprofile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\">Back</button>\n<h2 class=\"myprofileHeader\">Mi Perfil</h2>\n<div *ngIf=\"!user\">\n  <h2>NO USER LOGGED IN</h2>\n</div>\n<div *ngIf=\"pendingmessage\" class=\"pending\">\n<p>Tienes un mensaje nuevo</p>\n</div>\n\n<div *ngIf=\"user\">\n\n  <!-- <pre> {{ user | json }} </pre> -->\n  <ul class=\"home\">\n<li><a [routerLink]=\"['/profile']\">Mis datos</a></li>\n<li><a [routerLink]=\"['/mail']\">Reportar</a></li>\n<li><a [routerLink]=\"['/todo']\">To Do</a></li>\n<li><a [routerLink]=\"['/points']\">Puntos</a></li>\n  </ul>\n\n<div *ngIf=\"user.role=='Student'&& !user.refToBrother\">\n<button (click)=\"getabro(this.user._id)\">Get a brother</button>\n</div>\n</div>\n</div>\n"
+module.exports = "<div class=\"img\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n<h2 class=\"myprofileHeader\">Mi Perfil</h2>\n<div *ngIf=\"!user\">\n  <h2>NO USER LOGGED IN</h2>\n</div>\n<div *ngIf=\"pendingmessage\" class=\"pending\">\n<p>Tienes un mensaje nuevo</p>\n</div>\n\n<div *ngIf=\"user\">\n\n  <!-- <pre> {{ user | json }} </pre> -->\n  <ul class=\"home\">\n<li><a [routerLink]=\"['/profile']\">Mis datos</a></li>\n<li><a [routerLink]=\"['/mail']\">Reportar</a></li>\n<li><a [routerLink]=\"['/todo']\">To Do</a></li>\n<li><a [routerLink]=\"['/points']\">Puntos</a></li>\n  </ul>\n\n<div *ngIf=\"user.role=='Student'&& !user.refToBrother\">\n<button (click)=\"getabro(this.user._id)\">Get a brother</button>\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -2034,10 +2033,80 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWEAAAJ6CAYAAAD5
 
 /***/ }),
 
+/***/ "../../../../../src/assets/datos.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "datos.5326e2318d2f7fb6a8b9.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/home.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "home.af6b7e7f83346e1e7d48.png";
+
+/***/ }),
+
 /***/ "../../../../../src/assets/img1.png":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img1.60c600fb1d011fc3b3ef.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/index.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "index.5458446fd777a74df0ff.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/login.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "login.fa6cbab866c564caf905.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/mail.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "mail.9375379773d2318c308c.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/points.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "points.fe2105b366733594e38e.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/profile.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "profile.246b115ac7925a0e0f1e.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/quizz.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "quizz.128624a5586aae789625.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/selfie.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "selfie.6fe9574167c94f078487.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/todo.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "todo.b1119968874784fc1194.png";
 
 /***/ }),
 
