@@ -3,6 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { MessageService } from '../services/message.service';
 import { ActivatedRoute } from '@angular/router';
 import {IsLoggedInService} from '../services/is-logged-in.canactivate.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-chat',
@@ -15,7 +16,7 @@ export class ChatComponent implements OnInit {
   userId:String;
   currentUser;
   userRole;
-  constructor(public auth:AuthService, public messages:MessageService,private route: ActivatedRoute,
+  constructor(private location: Location, public auth:AuthService, public messages:MessageService,private route: ActivatedRoute,
   public log: IsLoggedInService) {
     this.user = this.auth.getUser();
     this.auth.getLoginEventEmitter()
@@ -58,5 +59,7 @@ export class ChatComponent implements OnInit {
       });
 
   }
-
+  cancel() {
+    this.location.back(); // <-- go back to previous location on cancel
+  }
 }

@@ -6,6 +6,7 @@ import { SelfieService } from '../services/selfie.service';
 import { ActivatedRoute } from '@angular/router';
 import { DataemotionService } from '../services/dataemotion.service';
 import {environment} from '../../environments/environment';
+import { Location } from '@angular/common';
 
 const BASEURL:string = environment.BASEURL + "/selfie";
 const BASEURLSelf:string = environment.BASEURL
@@ -31,7 +32,7 @@ export class SelfieComponent implements OnInit {
   mainemotion;
   urlimg=BASEURLSelf;
 
-  constructor(public auth: AuthService, public self: SelfieService,private route: ActivatedRoute,
+  constructor(private location: Location, public auth: AuthService, public self: SelfieService,private route: ActivatedRoute,
   private data: DataemotionService) {
     this.imageUrl= ''
    }
@@ -81,4 +82,7 @@ export class SelfieComponent implements OnInit {
     return maxEmotion;
   }
 
+  cancel() {
+    this.location.back(); // <-- go back to previous location on cancel
+  }
 }

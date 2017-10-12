@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuizzControllerService } from '../services/quizz-controller.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-quizz',
@@ -16,7 +17,7 @@ export class QuizzComponent implements OnInit {
   formInfo = {
     answer: ""
   }
-  constructor(public auth: AuthService,public controller: QuizzControllerService,
+  constructor(private location: Location, public auth: AuthService,public controller: QuizzControllerService,
   private router: Router) { }
 
   ngOnInit() {
@@ -53,6 +54,9 @@ export class QuizzComponent implements OnInit {
     this.controller.sendPoints(id,answer)
     .map(res => console.log(res))
     .subscribe(r=> console.log(r));
+  }
+  cancel() {
+    this.location.back(); // <-- go back to previous location on cancel
   }
 
 }

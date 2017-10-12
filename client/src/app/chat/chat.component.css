@@ -53,10 +53,10 @@ form{
   color:#FFF;
 }
 
-button{
+.glyphico{
   position:relative;
   left:55%;
   top: -50px;
   border: 1px solid #c7c7d3;
-  
+
 }
