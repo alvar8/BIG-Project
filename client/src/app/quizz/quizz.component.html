@@ -4,11 +4,11 @@
   <div *ngIf="this.counter=='0'" class="introduction">
     <p>Hola {{this.user.username}}</p>
     <p>Con tu ayuda, vamos a hacer algo grande, eliminar el acoso de las aulas. ¿Estás preparado para esta misión?</p>
-    <button (click)="this.getRandomNumber()" class="btn">Siguinte</button>
+    <button (click)="this.getRandomNumber()" class="btn">Siguiente</button>
   </div>
   <div *ngIf="this.counter >='1'&& this.counter<'4'">
     <!-- {{ this.Quizz | json}} -->
-      <h3>{{this.counter}}/3</h3>
+      <h3 class="three">{{this.counter}}/3</h3>
       <p>{{this.Quizz[0].Quizz[1].question }}</p>
   <div *ngIf="this.quizzcounter=='0'">
     <form>
@@ -19,13 +19,13 @@
   </div>
   <div *ngIf="this.quizzcounter>'0' && this.quizzcounter<3">
        <form>
-        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[0].answer}}
+        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].value}}"> <span>{{this.Quizz[0].Quizz[this.quizzcounter].answer[0].answer}}</span>
         <br>
-        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[1].value}}"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[1].answer}}
+        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[1].value}}"> <span>{{this.Quizz[0].Quizz[this.quizzcounter].answer[1].answer}}</span>
         <br>
-        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].value}}"> {{this.Quizz[0].Quizz[this.quizzcounter].answer[2].answer}}
+        <input type="radio" [(ngModel)]="formInfo.answer" name="answer" value="{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].value}}"> <span>{{this.Quizz[0].Quizz[this.quizzcounter].answer[2].answer}}</span>
         <br>
-        <button (click)="this.getRandomNumber(); this.getPoints(this.user._id)" class="btn">Siguiente</button>
+        <button (click)="this.getRandomNumber(); this.getPoints(this.user._id)" class="btn send">Siguiente</button>
       </form>
 </div>
   </div>

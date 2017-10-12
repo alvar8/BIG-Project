@@ -43,3 +43,26 @@ h3{
   margin-left: -77%;
   margin-top: 1%;
 }
+
+textarea{
+  background-color: #D9F6FE;
+  height:220px;
+  margin-bottom: 20%;
+}
+
+.three{
+  color:green;
+}
+p{
+  font-size: 22px;
+  padding-top: 2%;
+  margin-bottom: 10%;
+}
+span{
+  font-size: 20px;
+  padding: 5%;
+}
+
+.send{
+  margin-top: 20%;
+}

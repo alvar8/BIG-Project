@@ -13,7 +13,6 @@ export class MessageService {
   private userLoginEvent: EventEmitter<any> = new EventEmitter<any>();
   private options = { withCredentials: true };
   constructor(private http: Http) {
-    //this.isLoggedIn().subscribe();
   }
   public getLoginEventEmitter(): EventEmitter<any> {
     return this.userLoginEvent;

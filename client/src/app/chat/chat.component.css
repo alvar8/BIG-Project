@@ -22,9 +22,9 @@ textarea{
 }
 
 form{
-  position:fixed;
-  top:500px;
-  left:40px;
+  position:relative;
+  top:94%;
+  margin-top: 2%;
 }
 
 .chatbox:nth-child(odd){
@@ -56,7 +56,7 @@ form{
 
 .glyphicon-send{
   position:relative;
-  left:55%;
+  left:45%;
   top: -50px;
   border: 1px solid #c7c7d3;
 }
