@@ -1025,7 +1025,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/selfie/selfie.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"imgb\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>Cámara</h3>\n\n<div *ngIf=\"selfie\" class=\"pic\">\n<img [src]=\"urlimg + selfie.selfie\" class=\"img\"/>\n<div *ngIf=\"personEmotion\" class=\"emotion\">\n<p>{{personEmotion.name}}</p>\n</div>\n</div>\n<button (click)=\"getPersonEmotion(urlimg + selfie.selfie)\" class=\"glyphicon glyphicon-record\"></button>\n\n\n<form>\n  <fieldset>\n     <input type=\"file\" name=\"file\"  id=\"file\" ng2FileSelect [uploader]=\"uploader\" />\n  </fieldset>\n  <button (click)=\"submit(this.user.refToBrother,this.user._id)\" class=\"btn\"> Enviar </button>\n</form>\n</div>\n"
+module.exports = "<div class=\"imgb\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>Cámara</h3>\n\n<div *ngIf=\"selfie\" class=\"pic\">\n<img [src]=\"urlimg + selfie.selfie\" class=\"img\"/>\n<div *ngIf=\"personEmotion\" class=\"emotion\">\n<p>{{personEmotion.name}}</p>\n</div>\n</div>\n<button (click)=\"getPersonEmotion('urlimg + selfie.selfie')\" class=\"glyphicon glyphicon-record\"></button>\n<div *ngIf=\"personEmotion\" class=\"emotion\">\n<p>{{personEmotion.name}}</p>\n</div>\n\n<form>\n  <fieldset>\n     <input type=\"file\" name=\"file\"  id=\"file\" ng2FileSelect [uploader]=\"uploader\" />\n  </fieldset>\n  <button (click)=\"submit(this.user.refToBrother,this.user._id)\" class=\"btn\"> Enviar </button>\n</form>\n</div>\n"
 
 /***/ }),
 
