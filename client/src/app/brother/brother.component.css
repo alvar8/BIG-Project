@@ -1,14 +1,14 @@
 .img{
   background-image: url(../../assets/brother.png);
   height: 100vh;
-  font-family: Apercu;
+  font-family: Roboto;
   background-size: cover;
 }
 .home{
   list-style-type: none;
   width: 329px;
 	height: 348px;
-	font-family: Apercu;
+	font-family: Roboto;
 	font-size: 40px;
 	font-weight: bold;
 	line-height: 1.32;

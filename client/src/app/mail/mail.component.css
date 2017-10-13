@@ -1,11 +1,11 @@
 .img{
   background-image: url(../../assets/mail.png);
   height: 100vh;
-  font-family: Apercu;
+  font-family: Roboto;
   background-size: cover;
 }
 p{
-  font-family: Apercu;
+  font-family: Roboto;
 	font-size: 20px;
 	line-height: 1.05;
 	text-align: justify;

@@ -2,7 +2,7 @@
 .img{
   background-image: url(../../assets/index.png);
   height: 100vh;
-  font-family: Apercu;
+  font-family: Roboto;
   background-size: cover;
 }
 .btn{
