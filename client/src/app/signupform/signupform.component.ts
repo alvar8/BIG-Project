@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../services/auth.service';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-signupform',
@@ -13,10 +14,11 @@ formInfo = {
   password:"",
   role:""
 }
-  constructor(public auth:AuthService, private router: Router) { }
+  constructor(private location:Location, public auth:AuthService, private router: Router) { }
 
   ngOnInit() {
   }
+
 
   signup(){
     const {username, password, role} = this.formInfo;
@@ -28,6 +30,10 @@ formInfo = {
     } else{
       console.log("You must set a username and a password");
     }
+  }
+
+  cancel() {
+    this.location.back(); // <-- go back to previous location on cancel
   }
 
 }
