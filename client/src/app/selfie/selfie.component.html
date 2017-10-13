@@ -8,9 +8,10 @@
 <p>{{personEmotion.name}}</p>
 </div>
 </div>
-<button (click)="getPersonEmotion(urlimg + selfie.selfie)" class="glyphicon glyphicon-record"></button>
-
-
+<button (click)="getPersonEmotion('urlimg + selfie.selfie')" class="glyphicon glyphicon-record"></button>
+<div *ngIf="personEmotion" class="emotion">
+<p>{{personEmotion.name}}</p>
+</div>
 
 <form>
   <fieldset>
