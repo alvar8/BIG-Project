@@ -197,7 +197,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/brother.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 30%;\n  padding-left: 10%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n\n.home li{\n  padding:2%;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/brother.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Roboto;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 30%;\n  padding-left: 10%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n\n.home li{\n  padding:2%;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -272,7 +272,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/chat.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 302px;\n\theight: 60px;\n\tbackground-color: #ffffff;\n\tbox-shadow: 0 10px 40px 0 rgba(190, 190, 206, 0.5);\n\tfont-family: Apercu;\n\tfont-size: 20px;\n\tletter-spacing: -0.6px;\n\ttext-align: left;\n\tcolor: #c7c7d3;\n}\n\nform{\n  position:relative;\n  top:94%;\n  margin-top: 2%;\n}\n\n.chatbox:nth-child(odd){\n  width: 180px;\n\theight: 60px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 10px 40px 0 rgba(190, 190, 206, 0.5);\n  margin-left: 5%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n}\n\n\n.chatbox:nth-child(even){\n  width: 180px;\n\theight: 60px;\n  border-radius: 5px;\n  background-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin: 5% 0 5% 40%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n}\n\n.glyphicon-send{\n  position:relative;\n  left:45%;\n  top: -50px;\n  border: 1px solid #c7c7d3;\n}\n\n.glyphicon-arrow-left{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/chat.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Roboto;\n}\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 302px;\n\theight: 60px;\n\tbackground-color: #ffffff;\n\tbox-shadow: 0 10px 40px 0 rgba(190, 190, 206, 0.5);\n\tfont-family: Roboto;\n\tfont-size: 20px;\n\tletter-spacing: -0.6px;\n\ttext-align: left;\n\tcolor: #c7c7d3;\n}\n\nform{\n  position:relative;\n  top:94%;\n  margin-top: 2%;\n}\n\n.chatbox:nth-child(odd){\n  width: 180px;\n\theight: 60px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 10px 40px 0 rgba(190, 190, 206, 0.5);\n  margin-left: 5%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n}\n\n\n.chatbox:nth-child(even){\n  width: 180px;\n\theight: 60px;\n  border-radius: 5px;\n  background-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin: 5% 0 5% 40%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n}\n\n.glyphicon-send{\n  position:relative;\n  left:45%;\n  top: -50px;\n  border: 1px solid #c7c7d3;\n}\n\n.glyphicon-arrow-left{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -384,7 +384,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/profile.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/profile.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n", ""]);
 
 // exports
 
@@ -486,7 +486,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/home.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Apercu;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 50%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/home.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Roboto;\n\tfont-size: 39px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 50%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -561,7 +561,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/index.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  width: 120px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.text{\n  margin:10% 13% 10% 13%;\n  font-size: 36px;\n\tline-height: 1.11;\n  margin-top: 0;\n  padding-top: 27%;\n}\n", ""]);
+exports.push([module.i, "\n.img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/index.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  width: 120px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.text{\n  margin:10% 13% 10% 13%;\n  font-size: 36px;\n\tline-height: 1.11;\n  margin-top: 0;\n  padding-top: 27%;\n}\n", ""]);
 
 // exports
 
@@ -622,7 +622,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/login.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.login{\n  padding-top: 30%;\n}\ninput{\n  margin: 10% 0;\n  border: 0;\n  outline: 0;\n  background: transparent;\n  border-bottom: 1px solid black;\n  height:40px;\n\n}\n\ninput:-webkit-autofill {\n    -webkit-box-shadow: 0 0 0 30px white inset;\n}\ninput textarea { background: #FFF; }\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/login.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.login{\n  padding-top: 30%;\n}\ninput{\n  margin: 10% 0;\n  border: 0;\n  outline: 0;\n  background: transparent;\n  border-bottom: 1px solid black;\n  height:40px;\n\n}\n\ninput:-webkit-autofill {\n    -webkit-box-shadow: 0 0 0 30px white inset;\n}\ninput textarea { background: #FFF; }\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -713,7 +713,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/mail.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\np{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 2% 10%;\n}\n\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 360px;\n\theight: 253px;\n\topacity: 0.19;\n\tbackground-color: #0074cd;\n  margin-top: 2%;\n  color:#000;\n}\n\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 18px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/mail.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\np{\n  font-family: Roboto;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 2% 10%;\n}\n\nh3{\n  margin-top: 0;\n  padding: 10% 0;\n}\n\ntextarea{\n  width: 360px;\n\theight: 253px;\n\topacity: 0.19;\n\tbackground-color: #0074cd;\n  margin-top: 2%;\n  color:#000;\n}\n\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 18px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -842,7 +842,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/quizz.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n.introduction p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 10% 10% 0 10%;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.finish{\n  font-family: Apercu;\n\tfont-size: 22px;\n\tline-height: 1.5;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 20% 10% 0 10%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n\ntextarea{\n  background-color: #D9F6FE;\n  height:220px;\n  margin-bottom: 20%;\n}\n\n.three{\n  color:green;\n}\np{\n  font-size: 22px;\n  padding-top: 2%;\n  margin-bottom: 10%;\n}\nspan{\n  font-size: 20px;\n  padding: 5%;\n}\n\n.send{\n  margin-top: 20%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/quizz.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n.introduction p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.05;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 10% 10% 0 10%;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n.finish{\n  font-family: Apercu;\n\tfont-size: 22px;\n\tline-height: 1.5;\n\ttext-align: justify;\n\tcolor: #000000;\n  padding: 20% 10% 0 10%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n\ntextarea{\n  background-color: #D9F6FE;\n  height:220px;\n  margin-bottom: 20%;\n}\n\n.three{\n  color:green;\n}\np{\n  font-size: 22px;\n  padding-top: 2%;\n  margin-bottom: 10%;\n}\nspan{\n  font-size: 20px;\n  padding: 5%;\n}\n\n.send{\n  margin-top: 20%;\n}\n", ""]);
 
 // exports
 
@@ -1012,7 +1012,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".hidden{\n  visibility: hidden;\n}\n.img{\n  width:50%;\n  height:200px;\n}\n.imgb{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n  margin-bottom: 30%;\n}\n\n.pic{\n  width:100%;\n  background-color: #B9EEFC;\n}\n.imgb{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/selfie.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.glyphicon-record{\n  font-size: 33px;\n  color: green;\n}\n\n.glyphicon-arrow-left{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, ".hidden{\n  visibility: hidden;\n}\n.img{\n  width:50%;\n  height:200px;\n}\n.imgb{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img1.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n  margin-bottom: 30%;\n}\n\n.pic{\n  width:100%;\n  background-color: #B9EEFC;\n}\n.imgb{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/selfie.png") + ");\n  background-size: cover;\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n.glyphicon-record{\n  font-size: 33px;\n  color: green;\n}\n\n.glyphicon-arrow-left{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\n.emotion{\n  height: 140px;\n  width: 100px;\n  border: 5px solid #FADB29;\n  color: red;\n  position: fixed;\n  top: 40%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.emotion p{\n    position: relative;\n    top: 100%;\n    font-size: 20px;\n}\n", ""]);
 
 // exports
 
@@ -1025,7 +1025,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/selfie/selfie.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"imgb\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>Cámara</h3>\n\n<div *ngIf=\"selfie\" class=\"pic\">\n<img [src]=\"urlimg + selfie.selfie\" class=\"img\"/>\n</div>\n<button (click)=\"getPersonEmotion('http://dreamicus.com/data/face/face-06.jpg')\" class=\"glyphicon glyphicon-record\"></button>\n<div *ngIf=\"personEmotion\">\n<p>Main emotion: {{personEmotion.name}}</p>\n</div>\n\n<form>\n  <fieldset>\n     <input type=\"file\" name=\"file\"  id=\"file\" ng2FileSelect [uploader]=\"uploader\" />\n  </fieldset>\n  <button (click)=\"submit(this.user.refToBrother,this.user._id)\"> submit </button>\n</form>\n</div>\n"
+module.exports = "<div class=\"imgb\">\n  <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n  <h3>Cámara</h3>\n\n<div *ngIf=\"selfie\" class=\"pic\">\n<img [src]=\"urlimg + selfie.selfie\" class=\"img\"/>\n<div *ngIf=\"personEmotion\" class=\"emotion\">\n<p>{{personEmotion.name}}</p>\n</div>\n</div>\n<button (click)=\"getPersonEmotion(urlimg + selfie.selfie)\" class=\"glyphicon glyphicon-record\"></button>\n\n\n<form>\n  <fieldset>\n     <input type=\"file\" name=\"file\"  id=\"file\" ng2FileSelect [uploader]=\"uploader\" />\n  </fieldset>\n  <button (click)=\"submit(this.user.refToBrother,this.user._id)\" class=\"btn\"> Enviar </button>\n</form>\n</div>\n"
 
 /***/ }),
 
@@ -1609,7 +1609,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/login.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n.btn{\n  margin-bottom:10%;\n  background-color: black;\n  color:#FFF;\n  font-size: 14px;\n\tline-height: 1.14;\n  float: right;\n  margin-right: 10%;\n  width: 110px;\n\theight: 40px;\n\tborder-radius: 100px;\n\tbackground-color: #000000;\n}\n\ninput{\n  margin: 10% 0;\n  border: 0;\n  outline: 0;\n  background: transparent;\n  border-bottom: 1px solid black;\n  height:40px;\n\n}\n\ninput:-webkit-autofill {\n    -webkit-box-shadow: 0 0 0 30px white inset;\n}\ninput textarea { background: #FFF; }\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\nh2{\n  margin-top: 0;\n}\n", ""]);
 
 // exports
 
@@ -1622,7 +1622,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/signupform/signupform.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form >\n  <h2> Signup </h2>\n  <label> Username </label>\n  <input type=\"text\" [(ngModel)]=\"formInfo.username\" name=\"username\"/>\n  <br>\n  <label> Password </label>\n  <input type=\"password\" [(ngModel)]=\"formInfo.password\" name=\"password\"/>\n\n  <label> Role </label>\n  <input type=\"radio\" [(ngModel)]=\"formInfo.role\" name=\"role\" value=\"Tutor\"> Tutor<br>\n  <input type=\"radio\" [(ngModel)]=\"formInfo.role\" name=\"role\" value=\"Student\"> Student<br>\n\n  <button (click)=\"signup()\"> signup </button>\n</form>\n"
+module.exports = "<div class=\"img\">\n    <button (click)=\"cancel()\" class=\"glyphicon glyphicon-arrow-left\"></button>\n<form >\n  <h2> Signup </h2>\n  <label> Username </label>\n  <input type=\"text\" [(ngModel)]=\"formInfo.username\" name=\"username\"/>\n  <br>\n  <label> Password </label>\n  <input type=\"password\" [(ngModel)]=\"formInfo.password\" name=\"password\"/>\n  <br>\n  <label> Role </label>\n  <input type=\"radio\" [(ngModel)]=\"formInfo.role\" name=\"role\" value=\"Tutor\"> Tutor\n  <input type=\"radio\" [(ngModel)]=\"formInfo.role\" name=\"role\" value=\"Student\"> Student<br>\n\n  <button (click)=\"signup()\" class=\"btn\"> signup </button>\n</form>\n</div>\n"
 
 /***/ }),
 
@@ -1634,6 +1634,7 @@ module.exports = "<form >\n  <h2> Signup </h2>\n  <label> Username </label>\n  <
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1646,8 +1647,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SignupformComponent = (function () {
-    function SignupformComponent(auth, router) {
+    function SignupformComponent(location, auth, router) {
+        this.location = location;
         this.auth = auth;
         this.router = router;
         this.formInfo = {
@@ -1671,6 +1674,9 @@ var SignupformComponent = (function () {
             console.log("You must set a username and a password");
         }
     };
+    SignupformComponent.prototype.cancel = function () {
+        this.location.back(); // <-- go back to previous location on cancel
+    };
     return SignupformComponent;
 }());
 SignupformComponent = __decorate([
@@ -1679,10 +1685,10 @@ SignupformComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/signupform/signupform.component.html"),
         styles: [__webpack_require__("../../../../../src/app/signupform/signupform.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["Location"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["Location"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _c || Object])
 ], SignupformComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=signupform.component.js.map
 
 /***/ }),
@@ -1695,7 +1701,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/points.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\nh3{\n  margin-top: 0;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/points.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\nh3{\n  margin-top: 0;\n}\n", ""]);
 
 // exports
 
@@ -1770,7 +1776,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/datos.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/datos.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\np{\n  font-size: 22px;\n  margin-top: 20%;\n}\n", ""]);
 
 // exports
 
@@ -1852,7 +1858,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/todo.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n\n.bg-green{\n\twidth: 181px;\n\theight: 138px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 0 10px 0 rgba(110, 110, 123, 0.5);\n  margin-left:15%;\n}\n\n.bg-red{\n  width: 175px;\n\theight: 136px;\n\tborder-radius: 5px;\n\tbackground-color: #ff473d;\n\tbox-shadow: 0 0 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 40%;\n  padding-left: 3%;\n  margin-top: -3%;\n  margin-bottom: -3%;\n}\n\n.bg-blue{\n  width: 216px;\n\theight: 120px;\n\tborder-radius: 5px;\n\tbackground-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 25%;\n}\n\n.bg-green p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-red p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\ttext-align: left;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-blue p{\n  font-family: Apercu;\n\tfont-size: 20px;\n\tline-height: 1.2;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.idea{\n  text-align: left;\n  font-size: 22px;\n  margin: 7% 0 10% 15%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, ".img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/todo.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n\nh3{\n  margin:0;\n  padding-top: 5%;\n}\n\n.bg-green{\n\twidth: 181px;\n\theight: 138px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 0 10px 0 rgba(110, 110, 123, 0.5);\n  margin-left:15%;\n}\n\n.bg-red{\n  width: 175px;\n\theight: 136px;\n\tborder-radius: 5px;\n\tbackground-color: #ff473d;\n\tbox-shadow: 0 0 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 40%;\n  padding-left: 3%;\n  margin-top: -3%;\n  margin-bottom: -3%;\n}\n\n.bg-blue{\n  width: 216px;\n\theight: 120px;\n\tborder-radius: 5px;\n\tbackground-color: #0074cd;\n\tbox-shadow: 0 10px 40px 0 rgba(110, 110, 123, 0.5);\n  margin-left: 25%;\n}\n\n.bg-green p{\n  font-family: Roboto;\n\tfont-size: 20px;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-red p{\n  font-family: Roboto;\n\tfont-size: 20px;\n\ttext-align: left;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.bg-blue p{\n  font-family: Roboto;\n\tfont-size: 20px;\n\tline-height: 1.2;\n\ttext-align: center;\n\tcolor: #ffffff;\n  position: relative;\n  float: left;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%)\n}\n\n.idea{\n  text-align: left;\n  font-size: 22px;\n  margin: 7% 0 10% 15%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
 
 // exports
 
@@ -1929,7 +1935,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/profile.png") + ");\n  height: 100vh;\n  font-family: Apercu;\n  background-size: cover;\n}\n.myprofileHeader {\n\tfont-family: Apercu;\n\tfont-size: 44px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  text-align: center;\n}\n\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Lato;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 40%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\nh2{\n  margin:0;\n  padding-top: 2%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n", ""]);
+exports.push([module.i, "\n.img{\n  background-image: url(" + __webpack_require__("../../../../../src/assets/profile.png") + ");\n  height: 100vh;\n  font-family: Roboto;\n  background-size: cover;\n}\n.myprofileHeader {\n\tfont-family: Roboto;\n\tfont-size: 44px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  text-align: center;\n}\n\n.home{\n  list-style-type: none;\n  width: 329px;\n\theight: 348px;\n\tfont-family: Roboto;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tline-height: 1.32;\n\ttext-align: left;\n\tcolor: #000000;\n  padding-top: 40%;\n}\n.home a{\n  color:#000;\n}\n.home a:hover {\n    color: #0074cd;\n}\nh2{\n  margin:0;\n  padding-top: 2%;\n}\n\n.glyphicon{\n  font-size: 28px;\n  margin-left: -77%;\n  margin-top: 1%;\n}\n\n.pending{\n  width: 250px;\n\theight: 100px;\n\tborder-radius: 5px;\n\tbackground-color: #02ad58;\n\tbox-shadow: 0 0 40px 0 rgba(110, 110, 123, 0.5);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color:#FFF;\n  margin-left: 15%;\n}\n", ""]);
 
 // exports
 
