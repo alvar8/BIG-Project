@@ -88,3 +88,15 @@ h3{
   margin-left: -77%;
   margin-top: 1%;
 }
+
+@media (min-width: 600px) {
+  .img{
+    width: 375px;
+    height: 776px;
+    margin: 0 auto;
+    border: 10px solid black;
+    border-radius: 5%;
+    margin-top: 1.5%;
+    padding:10px;
+  }
+}
