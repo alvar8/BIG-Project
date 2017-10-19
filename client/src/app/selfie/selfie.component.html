@@ -8,7 +8,14 @@
 <p>{{personEmotion.name}}</p>
 </div>
 </div>
-<button (click)="getPersonEmotion('http://dreamicus.com/data/face/face-06.jpg')" class="glyphicon glyphicon-record"></button>
+<div *ngIf="!selfie" class="pic">
+<p> Example image</p>
+<img [src]=http://wzozfm.com/files/2014/01/1-31-happy-kid-stcloud1.jpg class="img"/>
+<div *ngIf="personEmotion" class="emotion">
+<p>{{personEmotion.name}}</p>
+</div>
+</div>
+<button (click)="getPersonEmotion('http://wzozfm.com/files/2014/01/1-31-happy-kid-stcloud1.jpg')" class="glyphicon glyphicon-record"></button>
 <div *ngIf="personEmotion" class="emotion">
 <p>{{personEmotion.name}}</p>
 </div>
