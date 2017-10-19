@@ -12,12 +12,10 @@ export class TodoService {
   constructor(private http: Http) { }
 
   private handleError(e) {
-    console.log("ToDo ERROR");
     return Observable.throw(e.json().message);
   }
 
   getToDo(){
-    console.log("entro en el servicio")
     return this.http.get(`${BASEURL}`)
       .map(res => res.json())
       .catch(this.handleError);

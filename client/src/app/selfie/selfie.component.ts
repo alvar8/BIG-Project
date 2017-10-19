@@ -53,13 +53,11 @@ export class SelfieComponent implements OnInit {
       form.append('refToOlderBrother', this.newSelfie.refToOlderBrother);
       form.append('refToYoungerBrother', this.newSelfie.refToYoungerBrother);
     };
-    console.log("hago subida de archivos")
     this.uploader.uploadAll()
     this.uploader.onCompleteItem=  () => console.log("hecho")
   }
 
   getPersonEmotion(imageUrl:String){
-    console.log(imageUrl)
     this.data.getPersonEmotion(imageUrl).subscribe(data=>
     this.personEmotion=this.getScore(data[0].scores))
   }
@@ -71,7 +69,6 @@ export class SelfieComponent implements OnInit {
       score: 0
     }
     for (let i = 0; i < scoresArr.length - 1; i++) {
-      console.log(scoresArr[i][1])
       if (scoresArr[i][1] > maxEmotion.score) {
         maxEmotion.name = scoresArr[i][0];
         maxEmotion.score = scoresArr[i][1];

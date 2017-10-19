@@ -29,28 +29,24 @@ export class MessageService {
   }
 
   sendmessages(id,message,ref,name){
-    console.log(ref)
     return this.http.post(`${BASEURL}/messages`, {id,message,ref,name}, this.options)
       .map(res => res.json())
       .catch(this.handleError);
   }
 
   bigBrotherSendMessages(id,message,ref,name){
-    console.log(ref)
     return this.http.post(`${BASEURL}/bigbrothermessages`, {id,message,ref,name}, this.options)
       .map(res => res.json())
       .catch(this.handleError);
   }
 
   getmessages(id){
-    console.log(id)
     return this.http.get(`${BASEURL}/messages/${id}`, this.options)
       .map(res => res.json())
       .catch(this.handleError);
   }
 
   getlastmessages(id){
-    console.log("titi")
     return this.http.get(`${BASEURL}/last/${id}`, this.options)
     .map(res => res.json())
     .catch(this.handleError);

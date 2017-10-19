@@ -33,9 +33,7 @@ export class QuizzComponent implements OnInit {
       this.counter = 0;
     }
     if(this.quizzcounter<3){
-      console.log('entro a sumar')
       this.quizzcounter++
-      console.log(this.quizzcounter)
     }else{
       this.quizzcounter=-1
     }

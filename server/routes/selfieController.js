@@ -9,8 +9,6 @@ const debug = require('debug')("angularauth:"+path.basename(__filename).split('.
 const selfieRoutes = express.Router();
 
 selfieRoutes.post('/', upload.single('file'),(req,res,next) => {
-  console.log("entro en backselfie")
-  console.log(req.body)
   const newselfie = new Selfie({
     refToOlderBrother:req.body.refToOlderBrother,
     refToYoungerBrother:req.body.refToYoungerBrother,

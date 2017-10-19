@@ -37,7 +37,6 @@ export class AuthService {
     }
 
     signup(username,password,role) {
-      console.log("entrooo")
       return this.http.post(`${BASEURL}/signup`, {username,password,role}, this.options)
         .map(res => res.json())
         .map(user => this.emitUserLoginEvent(user))
@@ -66,14 +65,12 @@ export class AuthService {
     }
 
     getbro(id) {
-      console.log(id)
       return this.http.post(`${BASEURL}/bro`, {id}, this.options)
         .map(res => res.json())
         .catch(this.handleError);
     }
 
     updateUser(id,username,password,alias,email,birthday,filename){
-      console.log(filename)
       return this.http.post(`${BASEURL}/edit`,{id,username,password,alias,email,birthday,filename})
       .map(res => res.json())
       .catch(this.handleError);

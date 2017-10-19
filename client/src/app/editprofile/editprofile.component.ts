@@ -42,7 +42,7 @@ export class EditprofileComponent implements OnInit {
     form.append('birthday', this.newUser.birthday);
 
   };
-  console.log("hago subida de archivos")
+  
   this.uploader.uploadAll();
   this.uploader.onCompleteItem=  (res) => console.log(res)
   }

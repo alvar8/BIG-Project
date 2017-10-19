@@ -35,7 +35,6 @@ export class UserprofileComponent implements OnInit {
   }
 
   getabro(id){
-    console.log(id)
     this.auth.getbro(id).map(user => console.log(user))
     .subscribe();
   }

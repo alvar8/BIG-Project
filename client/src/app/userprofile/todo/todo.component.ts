@@ -15,7 +15,6 @@ randomNumber3;
   constructor(private location: Location, public todoget: TodoService) { }
 
   ngOnInit() {
-    console.log("heyyyy")
     this.todoget.getToDo().subscribe(todolist => this.todos=todolist);
     this.randomNumber1=Math.round((Math.random()*3))
     this.randomNumber2=Math.round((Math.random()*3))

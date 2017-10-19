@@ -14,7 +14,6 @@ export class SelfieService {
   }
 
   private handleError(e) {
-    console.log("SELFIE ERROR");
     return Observable.throw(e.json().message);
   }
 

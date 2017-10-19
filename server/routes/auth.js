@@ -99,7 +99,6 @@ authRoutes.post ('/edit', upload.single('file'),(req,res,next) =>{
 
 authRoutes.post ('/bro',(req,res,next) =>{
   const {id} = req.body;
-  console.log(id)
 
   User.findOneAndUpdate(
     {role:"Tutor", refToBrother:null },
@@ -118,9 +117,6 @@ authRoutes.post ('/bro',(req,res,next) =>{
 
 authRoutes.post('/messages',(req,res,next)=>{
   const {id,message,ref,name} = req.body;
-    console.log(id)
-    console.log(message)
-    console.log(ref)
     const newMessage = new Message({
       refToYoungerBrother:id,
       message:name + ": " + message,
@@ -133,9 +129,6 @@ authRoutes.post('/messages',(req,res,next)=>{
 
   authRoutes.post('/bigbrothermessages',(req,res,next)=>{
     const {id,message,ref,name} = req.body;
-      console.log(id)
-      console.log(message)
-      console.log(ref)
       const newMessage = new Message({
         refToOlderBrother:id,
         message:name + ": " + message,
@@ -148,14 +141,12 @@ authRoutes.post('/messages',(req,res,next)=>{
 
   authRoutes.get('/messages/:id',(req,res,next)=>{
     const{id}=req.params;
-    console.log(id)
     Message.find({$or:[{refToYoungerBrother:id},{refToOlderBrother:id}]},(err,messages)=>{
     res.status(200).json(messages);
   }).catch( e => res.status(500).json({error:e.message}));
   })
 
   authRoutes.get('/last/:id',(req, res, next)=>{
-    console.log("tototo")
     const {id}= req.params;
     Message.findOne({ $or:[{refToYoungerBrother:id},{refToOlderBrother:id}]}, {}, { sort: { 'created_at' : -1 } })
     .then(result => res.status(200).json(result))

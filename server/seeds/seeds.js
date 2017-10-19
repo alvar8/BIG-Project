@@ -1,7 +1,8 @@
+require('dotenv').config()
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-mongoose.connect('mongodb://localhost/bullyingapp');
+mongoose.connect('mongodb://alvar:1234@ds113435.mlab.com:13435/bigproject');
 
 const User = require('../models/User.js');
 

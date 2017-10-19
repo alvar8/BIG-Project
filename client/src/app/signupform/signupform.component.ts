@@ -23,7 +23,6 @@ formInfo = {
   signup(){
     const {username, password, role} = this.formInfo;
     if(username != "" && password != ""){
-      console.log(`Signup with ${username} ${password}`)
       this.auth.signup(username, password, role)
       .map(user => console.log(user))
       .subscribe(r=>this.router.navigate(['/home']));

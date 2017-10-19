@@ -27,7 +27,6 @@ export class LoginformComponent implements OnInit {
   login(){
     const {username, password} = this.formInfo;
     if(username != "" && password != ""){
-      console.log(`Login with ${username} ${password}`)
       this.auth.login(username, password)
       .map(user => console.log(user))
       .subscribe(r=>this.router.navigate(['/home']));

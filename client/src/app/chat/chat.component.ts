@@ -40,7 +40,6 @@ export class ChatComponent implements OnInit {
 
 
   send(id,message,ref,name){
-    console.log(name)
     this.messages.sendmessages(id,message,ref,name).map(user => console.log(user))
     .subscribe(result=>{
       this.messages.getmessages(this.userId)
@@ -50,8 +49,6 @@ export class ChatComponent implements OnInit {
   }
 
   bigBrotherSend(id,message,ref,name){
-    console.log(this.user)
-    console.log(name)
     this.messages.bigBrotherSendMessages(id,message,ref,name).map(user => console.log(user))
     .subscribe(response => {
       this.messages.getmessages(this.userId)
